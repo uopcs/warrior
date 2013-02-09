@@ -1,7 +1,6 @@
 uopcs
 =====
-
-code for Un
+code and happenings for the University of Portsmouth Computing Society
 
 tempsite
 --------
