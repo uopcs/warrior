@@ -1,6 +1,6 @@
 warrior
 =======
-code for our websites
+code and shit for UoPCS
 
 *repo named after HMS Warrior*
 
