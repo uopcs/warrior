@@ -1,3 +1,3 @@
 $(function() {
-	setTimeout(function() {	$("a, .logo").css("display", "block"); }, 15000); // 15 seconds in - BAM - show them bad girls!
+	$("a, .logo").delay(15000).show(0); // 15 seconds in - BAM - show them bad girls!
 });
