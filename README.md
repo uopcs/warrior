@@ -1,6 +1,8 @@
-websites
+warrior
 =======
 code for our websites
+
+*repo named after HMS Warrior*
 
 tempsite
 --------
@@ -9,6 +11,8 @@ That beautiful mars landing site... it's beautiful
 images
 ------
 Images for the Facebook events, twitter and more
+
+*this is only here because we don't have a home for it yet!*
 
 mainsite
 --------
