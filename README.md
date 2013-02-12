@@ -1,6 +1,6 @@
-uopcs
-=====
-code and happenings for the University of Portsmouth Computing Society
+websites
+=======
+code for our websites
 
 tempsite
 --------
