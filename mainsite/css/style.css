@@ -97,7 +97,6 @@ main .event{
 }
 
 	main .event .top, main .event .content, main .event .previous{
-		padding: 1em;
 		border-bottom: 5px solid rgba(25, 25, 25, 0.2);
 		border-right: 5px solid rgba(25, 25, 25, 0.2);	
 	}
@@ -110,6 +109,7 @@ main .event{
 	}
 
 	main .event .top{
+		padding: 2em 0 1em;
 		text-shadow: 1px 1px #333, 2px 2px #333,
 				     3px 3px #333, 4px 4px #333,
 				     5px 5px #333, 6px 6px #333,
@@ -124,9 +124,7 @@ main .event{
 		}
 
 		main .event .top h1{
-			padding-bottom: 10px;
 			font-size: 4em;
-			border-bottom: 4px solid rgba(255, 255, 255, 0.025);
 		}
 
 		main .event .top h2{
@@ -134,14 +132,19 @@ main .event{
 			font-size: 2em;	
 		}
 
-	main .event .content{
+	main .event .content{		
+		padding: 1em;
 		overflow: hidden;
 		background-color: #f5f5f5;
 	}
 
 		main .event .content .col{
 			float: left;
-			width: 33.3%;
+			width: 50%;
+		}
+
+		main .event .content .col:nth-child(-n+2){
+			padding-bottom: 10px;	
 		}
 
 			main .event .content .col h2, main .theothershit .top h2{
@@ -151,26 +154,34 @@ main .event{
 				border-bottom: 2px solid rgba(25, 25, 25, 0.1);
 			}
 
-			main .event .content .col h2, main .event .content .col ul{
+			main .event .content .col:nth-child(2n) h2,
+			main .event .content .col:nth-child(2n) ul{
 				border-left: 2px dashed rgba(25, 25, 25, 0.1);
 			}
 
-			main .event .content .col:first-child h2, main .event .content .col:first-child ul{
-				border-left: none;
+			main .event .content .col ul{
+				padding: 10px 0 0;
 			}
 
-			main .event .content .col:nth-child(1) ul{	color: rgb(80, 60, 78); }
-			main .event .content .col:nth-child(2) ul{	color: rgb(60, 66, 80); }
-			main .event .content .col:nth-child(3) ul{	color: rgb(80, 72, 60); }
-
 				main .event .content .col ul li{
-					margin: 10px 0;
+					margin: 0 0 10px;
+					color: rgb(29, 29, 29);
 					font-size: 30px;
 					list-style: none;
 					font-weight: bolder;
 					text-shadow: 0 2px 0 rgba(25, 25, 25, 0.2);
 					text-align: center;
 				}
+
+				main .event .content .col:nth-child(1) ul li:nth-child(1),
+				main .event .content .col:nth-child(2) ul li:nth-child(1){ color: rgb(71, 88, 122); }
+
+				main .event .content .col:nth-child(1) ul li:nth-child(2),
+				main .event .content .col:nth-child(2) ul li:nth-child(2){ color: rgb(122, 71, 71); }
+
+				main .event .content .col:nth-child(1) ul li:nth-child(3),
+				main .event .content .col:nth-child(2) ul li:nth-child(3){ color: rgb(158, 115, 61);; }
+
 
 	main .event .previous{
 		color: #f5f5f5;
