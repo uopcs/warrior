@@ -78,7 +78,7 @@ header .title{
 		background: url('../img/logo.png') 40% 0 / 100% no-repeat;
 	}
 
-main .event, main .theothershit .col{
+main .event{
 	-webkit-box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2),
 					   -10px -10px 0 rgba(25, 25, 25, 0.2);
 	   -moz-box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2),
@@ -214,10 +214,20 @@ main .event{
 	news, social and previous events section
 											*/
 
+main .eminem{ /* he's a white rapper, get it? white wrapper? nvm... */
+	padding-top: 2.5%;
+	margin-top: 10%;
+	background: white;	
+	-webkit-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
+	   -moz-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
+			box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
+}
+
 main .theothershit{
+	overflow: hidden;
 	width: 70%;
-	height: 100px;	
-	margin: 5% auto 0;
+	margin: 0 auto 0;
+
 }
 
 	main .theothershit .col{
@@ -237,7 +247,7 @@ main .theothershit{
 			overflow: auto;
 			background-color: #f5f5f5;
 		}
-
+		
 		main .theothershit .col .content{
 			background-color: rgb(41, 41, 41);
 		}
