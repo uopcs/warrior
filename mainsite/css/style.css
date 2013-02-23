@@ -290,9 +290,11 @@ main .archive{
 											*/
 
 main .wrap{
-	padding-top: 2.5%;
+	padding: 2.5% 0;
 	margin-top: 11%;
 	background: white;	
+	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
+
 	-webkit-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
 	   -moz-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
 			box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
@@ -300,15 +302,23 @@ main .wrap{
 
 main .theothershit{
 	overflow: hidden;
-	width: 75%;
+	width: 70%;
 	margin: 0 auto 0;
 
-}
+}	
 
 	main .theothershit .col{
 		float: left;
 		margin: 0 2.5%;
+		width: 35%;
+	}
+
+	main .theothershit .col:first-child{
 		width: 40%;
+	}
+
+	main .theothershit .col:last-child{
+		width: 10%;
 	}
 
 	main .theothershit .col:nth-child(-n+2){
@@ -321,18 +331,51 @@ main .theothershit{
 			font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
 			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
 			text-transform: uppercase;	
-		}			
-		
-		main .theothershit .col .content .post p{
-			font-size: 0.9em;
-			text-shadow: 0 0.1em 0 rgba(25, 25, 25, 0.2);
-			line-height: 1.5em;
 		}
-		main .theothershit .col .content .post h3{			
+
+		main .theothershit .col .content iframe{
+			border: 0;
+		}
+
+		main .theothershit .col .content h3{			
 			margin: 0.5em 0;
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;			
 			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
 		}
-		main .theothershit .col .content .post img{ max-width: 100%;}
 
-	
+			main .theothershit .col .content .post p{
+				font-size: 0.9em;
+				text-shadow: 0 0.1em 0 rgba(25, 25, 25, 0.2);
+				line-height: 1.5em;
+			}
+			
+			main .theothershit .col .content .post img{ max-width: 100%; }
+
+
+
+/*
+	footer
+			*/
+
+footer{
+	padding: 2.5em 5em 4em;
+	width: 100%;
+	background: rgb(41, 41, 41);
+}
+
+	footer a{
+		display: block;
+		width: 100%;
+		color: #f5f5f5;
+		font-size: 5em;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-shadow: 0 0.1em 0 rgb(29, 29, 29);
+		font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
+		text-align: center;
+	}
+
+	footer a:hover{
+		padding-top: 5px;
+		text-shadow: none;
+	}
