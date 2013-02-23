@@ -221,6 +221,8 @@ main .event{
 					font-size: 0.7em;
 				}
 
+
+
 /*
 	archive
 			*/
@@ -284,6 +286,23 @@ main .archive{
 			color: white;
 			font-size: 0.8em;			
 		}
+
+@media all and (max-width: 640px) {
+	main .archive h1{
+		width: 100%;
+		float: none;
+		margin-bottom: 0.5em;
+	}
+	main .archive .details{
+		padding-left: 2em;
+		width: 90%;
+	}
+	.details .col ul li {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
 
 /* 
 	news, social and previous events section
