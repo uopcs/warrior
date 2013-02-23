@@ -147,7 +147,7 @@ main .event{
 			padding-bottom: 10px;	
 		}
 
-			main .event .content .col h2, main .theothershit .top h2{
+			main .event .content .col h2{
 				font-family: 'High Pixel', Helvetica, Arial, sans-serif;
 				text-align: center;
 				text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
@@ -273,11 +273,11 @@ main .archive{
 			text-shadow: 0 0.15em 0 rgb(24, 24, 24)
 		}
 
-		main .archive .details .col:nth-child(1) h2{ color: rgb(71,  88, 122); }
-		main .archive .details .col:nth-child(2) h2{ color: rgb(122, 71,  71); }
-		main .archive .details .col:nth-child(3) h2{ color: rgb(158, 115, 61); }
-		main .archive .details .col:nth-child(4) h2{ color: rgb(71,  122, 91); }		
-		main .archive .details .col:nth-child(5) h2{ color: rgb(117, 95, 150); }		
+		main .archive .details .col:nth-child(1) h2{ color: rgb(109, 129, 170); }
+		main .archive .details .col:nth-child(2) h2{ color: rgb(148, 102, 102); }
+		main .archive .details .col:nth-child(3) h2{ color: rgb(184, 150, 107); }
+		main .archive .details .col:nth-child(4) h2{ color: rgb(100, 153, 117); }		
+		main .archive .details .col:nth-child(5) h2{ color: rgb(129, 109, 158); }		
 
 		main .archive .details .col ul li{
 			list-style: none;
@@ -300,7 +300,7 @@ main .wrap{
 
 main .theothershit{
 	overflow: hidden;
-	width: 70%;
+	width: 75%;
 	margin: 0 auto 0;
 
 }
@@ -308,23 +308,31 @@ main .theothershit{
 	main .theothershit .col{
 		float: left;
 		margin: 0 2.5%;
+		width: 40%;
 	}
 
-	main .theothershit .col:first-child{
-		width: 70%;
+	main .theothershit .col:nth-child(-n+2){
+		padding-right: 1em;
+		border-right: 5px dashed rgba(25, 25, 25, 0.2);
 	}
 
-	main .theothershit .col:last-child{
-		width: 20%;
-	}
-
-		main .theothershit .col .top{
-			overflow: auto;
-			background-color: #f5f5f5;
-		}
+		main .theothershit .col h2{
+			margin: 0 0 1em;
+			font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
+			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
+			text-transform: uppercase;	
+		}			
 		
-		main .theothershit .col .content{
-			background-color: rgb(41, 41, 41);
+		main .theothershit .col .content .post p{
+			font-size: 0.9em;
+			text-shadow: 0 0.1em 0 rgba(25, 25, 25, 0.2);
+			line-height: 1.5em;
 		}
+		main .theothershit .col .content .post h3{			
+			margin: 0.5em 0;
+			font-family: 'High Pixel', Helvetica, Arial, sans-serif;			
+			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
+		}
+		main .theothershit .col .content .post img{ max-width: 100%;}
 
 	
