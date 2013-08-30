@@ -36,22 +36,47 @@ body{
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-header .title{
-	background: #B9DFC8;
+header{
+	width: 100%;
+	background: #F5F5F5;
 	padding: 20px 0;
 	margin-bottom: 50px;
 	box-shadow: 0 5px 0 rgba(0,0,0,.15);
 }
 
-	header .title p:last-child{ text-align: right; }
+header .title{
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+}
+
+	header .title span{
+		width: 12.5%;
+		padding: 25px 10px;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: 'High Pixel';
+	}
+
+	header .title span:first-child{ text-align: right; }
 
 	header .title .logo{
+		width: 75%;
 		text-indent: -2345px;
-		display: block;
-		width: 100%;
+		display: inline-block;
 		min-height: 100px;
-		padding: 50px 0;
+		padding: 30px 0;
 		background: url('../img/logodull.png') center no-repeat;
+	}
+
+	header .title .logo::before,
+	header .title .logo::after{
+		display: inline-block;
+		
+	}
+
+	header .title .logo::before{
+		content: 'The';
 	}
 
 main .event, main .archive{
@@ -132,6 +157,18 @@ main .event{
 				text-overflow: ellipsis;
 				color: rgb(29, 29, 29);
 			}
+
+				.more-info{
+					text-transform: uppercase;
+					font-family: 'High Pixel', Helvetica, Arial, sans-serif;
+					font-size: .5em;
+					
+				}
+
+				.ordinal-suffix{
+					font-size: .5em;
+					vertical-align: super;
+				}
 
 	main .event .previous{
 		color: #f5f5f5;
@@ -261,64 +298,6 @@ main .archive{
 main .wrap{
 	padding: 2.5% 0;
 	margin-top: 11%;
-	background: white;	
-	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
-
-	-webkit-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
-	   -moz-box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
-			box-shadow: 0 -5px 0 rgba(25, 25, 25, 0.2);
-}
-
-main .theothershit{
-	overflow: hidden;
-	width: 70%;
-	margin: 0 auto 0;
-
-}	
-
-	main .theothershit .col{
-		float: left;
-		margin: 0 2.5%;
-		width: 35%;
-	}
-
-	main .theothershit .col:first-child{
-		width: 40%;
-	}
-
-	main .theothershit .col:last-child{
-		width: 10%;
-	}
-
-	main .theothershit .col:nth-child(-n+2){
-		padding-right: 1em;
-		border-right: 5px dashed rgba(25, 25, 25, 0.2);
-	}
-
-		main .theothershit .col h2{
-			margin: 0 0 1em;
-			font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
-			text-transform: uppercase;	
-		}
-
-		main .theothershit .col .content iframe{
-			border: 0;
-		}
-
-		main .theothershit .col .content h3{			
-			margin: 0.5em 0;
-			font-family: 'High Pixel', Helvetica, Arial, sans-serif;			
-		}
-
-			main .theothershit .col .content .post p{
-				font-size: 0.9em;
-				line-height: 1.5em;
-			}
-			
-			main .theothershit .col .content .post img{ max-width: 100%; }
-
-
-
 /*
 	footer
 			*/
@@ -328,18 +307,3 @@ footer{
 	width: 100%;
 	background: rgb(41, 41, 41);
 }
-
-	footer a{
-		display: block;
-		width: 100%;
-		color: #f5f5f5;
-		font-size: 5em;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
-		text-align: center;
-	}
-
-	footer a:hover{
-		padding-top: 5px;
-	}
