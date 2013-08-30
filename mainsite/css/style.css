@@ -32,69 +32,27 @@
 }
 
 body{
-	background: #7cb83d url('../img/tile.png');
-	background-size: 75%;
+	background: #6DA479;
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-header .strip{ /* Ooo, naughty. ;) */
-	width: 100%;
-	height: 45px;
-	background-color: rgb(41, 41, 41);
-
-	-webkit-box-shadow: 0 5px 0 rgba(25, 25, 25, 0.2);
-	   -moz-box-shadow: 0 5px 0 rgba(25, 25, 25, 0.2);
-			box-shadow: 0 5px 0 rgba(25, 25, 25, 0.2);
-}
-
 header .title{
-	margin: -40px auto 0;
-	width: 69%; /* HAHAHAHA... no */
-	height: 100px;
+	margin: 20px 0 50px;
 }
 
-	header .title p, header .title .logo{
-		float: left;
-	}
-
-	header .title p:first-child{
-		text-align: right;
-	}
-
-	header .title p{
-		width: 15%;
-		font-size: 1.5em;
-		font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-		color: #f5f5f5;
-		text-transform: uppercase;
-	}
+	header .title p:last-child{ text-align: right; }
 
 	header .title .logo{
-		text-indent: -9001px; /* IT'S OVER 9000!!! */
+		text-indent: -2345px;
 		display: block;
-		width: 65%;
-		margin: 0 2.5%;
-		height: 100%;
-		background: url('../img/logo.png') 40% 0 / 100% no-repeat;
+		width: 100%;
+		min-height: 100px;
+		padding: 50px 0;
+		background: rgba(0,0,0,.15) url('../img/logo.png') center no-repeat;
 	}
-
-@media all and (max-width: 640px) {
-	header .title p{
-		width: 10%;
-		font-size: 1em;
-	}
-	header .title .logo{
-		width: 75%;
-	}
-}
 
 main .event, main .archive{
-	-webkit-box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2),
-					   -10px -10px 0 rgba(25, 25, 25, 0.2);
-	   -moz-box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2),
-					   -10px -10px 0 rgba(25, 25, 25, 0.2);	
-			box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2),
-					   -10px -10px 0 rgba(25, 25, 25, 0.2);
+	box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2);
 }
 
 /* 
@@ -102,7 +60,7 @@ main .event, main .archive{
 					*/
 
 main .event{
-	margin: 5% auto 0;
+	margin: 0 auto;
 	width: 60%;
 }
 
@@ -112,85 +70,65 @@ main .event{
 	}
 
 	main .event .top, main .event .previous{
-		padding: 1em 0;
-		font-family: 'High Pixel', Helvetica, Arial, sans-serif;
+		padding: 1em;
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 		background: rgb(41, 41, 41);
-		text-align: center;	
 	}
 
 	main .event .top{
-		padding: 2em 0 1em;
-		text-shadow: 1px 1px #333, 2px 2px #333,
-				     3px 3px #333, 4px 4px #333,
-				     5px 5px #333, 6px 6px #333,
-				     7px 7px #333;
+		padding: .25em 1em;
 	}
 
-		main .event .top h1, main .event .previous .meetings h2, main .archive h1{
-			margin: 0.1em 0;
-			color: #f5f5f5;
-			font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
-			text-transform: uppercase;
-		}
-
 		main .event .top h1{
-			font-size: 4em;
+			letter-spacing: 30px;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 40px;
+			font-family: 'High Pixel', Arial, sans-serif;
+			color: #f5f5f5;
 		}
 
 	main .event .content{		
-		padding: 1em;
+		padding: 0 1em;
 		overflow: hidden;
 		background-color: #f5f5f5;
 	}
 
-		main .event .content .col{
-			float: left;
-			width: 50%;
+		main .event .content table{
+			width: 100%;
 		}
 
-		main .event .content .col:nth-child(-n+2){
-			padding-bottom: 10px;	
+		main .event .content table tr{
+			display: block;
+			overflow: hidden;
+			padding: 15px 0;
+			border-bottom: 2px solid rgba(25, 25, 25, 0.1);
+			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+			font-size: 2em;
+			color: rgba(0,0,0,.85);
 		}
 
-			main .event .content .col h2{
-				font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-				text-align: center;
-				text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
-				border-bottom: 2px solid rgba(25, 25, 25, 0.1);
+		main .event .content table tr:last-child{ border: none; }
+
+			main .event .content table td{
+				display: inline-block;
+				text-align: right;
 			}
 
-			main .event .content .col:nth-child(2n) h2,
-			main .event .content .col:nth-child(2n) ul{
-				border-left: 2px dashed rgba(25, 25, 25, 0.1);
+			main .event .content table td.q{
+				width: 20%;
+				padding-right: 10px;
+				border-right: 2px solid rgba(25, 25, 25, 0.1);
 			}
 
-			main .event .content .col ul{
-				padding: 10px 0 0;
+			main .event .content .col td.a{
+				width: 80%;
+				padding-left: 10px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				color: rgb(29, 29, 29);
 			}
-
-				main .event .content .col ul li{
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					margin: 0 0 10px;
-					padding: 0 0.25em;
-					color: rgb(29, 29, 29);
-					font-size: 1.8em;
-					list-style: none;
-					font-weight: bolder;
-					text-shadow: 0 0.1em 0 rgba(25, 25, 25, 0.2);
-					text-align: center;
-				}
-
-				main .event .content .col:nth-child(1) ul li:nth-child(1),
-				main .event .content .col:nth-child(2) ul li:nth-child(1){ color: rgb(71, 88, 122); }
-
-				main .event .content .col:nth-child(1) ul li:nth-child(2),
-				main .event .content .col:nth-child(2) ul li:nth-child(2){ color: rgb(122, 71, 71); }
-
-				main .event .content .col:nth-child(1) ul li:nth-child(3),
-				main .event .content .col:nth-child(2) ul li:nth-child(3){ color: rgb(158, 115, 61); }
-
 
 	main .event .previous{
 		color: #f5f5f5;
@@ -203,22 +141,24 @@ main .event{
 		}
 
 		main .event .previous p{
-			padding: 5px 10px;
+			font-size: 10px;
+			letter-spacing: 5px;
 			width: 10%;
 			text-transform: uppercase;
-			text-shadow: 0 2px 0 rgba(0,0,0,0.35);
+			font-family: 'High Pixel', Arial, sans-serif;
 		}
 
 		main .event .previous .meetings{	
-			padding: 0 10px;
+			padding: 0 20px;
 			width: 30%;
+			text-align: right;
 			border-right: 2px solid rgba(255, 255, 255, 0.05);
-			text-shadow: 1px 1px #333, 2px 2px #333,
-					     3px 3px #333;
+			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 		}
 
 		main .event .previous .meetings:last-child{
-			border-right: none;
+			border: none;
+			padding: 0;
 		}
 
 				main .event .previous .meetings h2{
@@ -228,43 +168,8 @@ main .event{
 				main .event .previous .meetings h3{
 					color: rgb(175, 175, 175);
 					font-size: 0.7em;
+					font-weight: 500;
 				}
-
-@media all and (max-width: 1000px) {
-	main .event .top h1{
-		font-size: 2em;
-	}
-
-	main .event .content .col h2{
-		font-size: 1.2em;
-	}
-		main .event .content .col ul li{
-			font-size: 1em;
-		}
-	main .event .previous .meetings {
-		width: 33.3%;
-	}
-		main .event .previous .meetings h2 {
-			font-size: 0.5em;
-			margin-bottom: 0.5em;
-		}
-		main .event .previous p {
-			width: 100%;
-	}
-}
-
-@media all and (max-width: 640px) {
-	main .event .top h1{
-		font-size: 1.2em;
-	}
-	main .event .content .col h2{
-		font-size: 0.9em;
-	}
-	main .event .content .col ul li{
-		font-size: 0.75em;
-	}
-}
-
 
 /*
 	archive
@@ -315,7 +220,6 @@ main .archive{
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;
 			color: white;
 			font-size: 0.8em;
-			text-shadow: 0 0.15em 0 rgb(24, 24, 24)
 		}
 
 		main .archive .details .col:nth-child(1) h2{ color: rgb(109, 129, 170); }
@@ -391,7 +295,6 @@ main .theothershit{
 		main .theothershit .col h2{
 			margin: 0 0 1em;
 			font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
-			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
 			text-transform: uppercase;	
 		}
 
@@ -402,12 +305,10 @@ main .theothershit{
 		main .theothershit .col .content h3{			
 			margin: 0.5em 0;
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;			
-			text-shadow: 0.1em 0.1em 0 rgba(25, 25, 25, 0.2);
 		}
 
 			main .theothershit .col .content .post p{
 				font-size: 0.9em;
-				text-shadow: 0 0.1em 0 rgba(25, 25, 25, 0.2);
 				line-height: 1.5em;
 			}
 			
@@ -432,12 +333,10 @@ footer{
 		font-size: 5em;
 		text-decoration: none;
 		text-transform: uppercase;
-		text-shadow: 0 0.1em 0 rgb(29, 29, 29);
 		font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
 		text-align: center;
 	}
 
 	footer a:hover{
 		padding-top: 5px;
-		text-shadow: none;
 	}
