@@ -37,7 +37,10 @@ body{
 }
 
 header .title{
-	margin: 20px 0 50px;
+	background: #B9DFC8;
+	padding: 20px 0;
+	margin-bottom: 50px;
+	box-shadow: 0 5px 0 rgba(0,0,0,.15);
 }
 
 	header .title p:last-child{ text-align: right; }
@@ -48,7 +51,7 @@ header .title{
 		width: 100%;
 		min-height: 100px;
 		padding: 50px 0;
-		background: rgba(0,0,0,.15) url('../img/logo.png') center no-repeat;
+		background: url('../img/logodull.png') center no-repeat;
 	}
 
 main .event, main .archive{
