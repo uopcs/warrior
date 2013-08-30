@@ -45,13 +45,14 @@ header{
 }
 
 header .title{
-	overflow: hidden;
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 	header .title span{
-		width: 12.5%;
+		float: left;
+		width: 15%;		
 		padding: 25px 10px;
 		text-transform: uppercase;
 		font-size: 20px;
@@ -61,23 +62,15 @@ header .title{
 	header .title span:first-child{ text-align: right; }
 
 	header .title .logo{
-		width: 75%;
+		width: 70%;
 		text-indent: -2345px;
-		display: inline-block;
+		float: left;
 		min-height: 100px;
 		padding: 30px 0;
 		background: url('../img/logodull.png') center no-repeat;
 	}
 
-	header .title .logo::before,
-	header .title .logo::after{
-		display: inline-block;
-		
-	}
-
-	header .title .logo::before{
-		content: 'The';
-	}
+	header .title .logo:hover{ opacity: .8; }
 
 main .event, main .archive{
 	box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2);
