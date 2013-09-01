@@ -73,7 +73,7 @@ header .title{
 	header .title .logo:hover{ opacity: .8; }
 
 main .event, main .archive{
-	box-shadow: 10px  10px 0 rgba(25, 25, 25, 0.2);
+	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
 
 /* 
@@ -82,12 +82,11 @@ main .event, main .archive{
 
 main .event{
 	margin: 0 auto;
-	width: 60%;
+	width: 70%;
 }
 
 	main .event .top, main .event .content, main .event .previous, main .archive{
 		border-bottom: 5px solid rgba(25, 25, 25, 0.2);
-		border-right: 5px solid rgba(25, 25, 25, 0.2);	
 	}
 
 	main .event .top, main .event .previous{
@@ -154,8 +153,15 @@ main .event{
 				.more-info{
 					text-transform: uppercase;
 					font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-					font-size: .5em;
-					
+					font-size: .5em;					
+					display: inline-block;
+					color: #222;
+					text-decoration: none;
+					border-bottom: 3px solid #8A8585;
+				}
+
+				.more-info:hover{
+					border-color: transparent;
 				}
 
 				.ordinal-suffix{
@@ -166,7 +172,7 @@ main .event{
 	main .event .previous{
 		color: #f5f5f5;
 		overflow: hidden;
-		padding: 1em;
+		padding: 1em 0;
 	}
 
 		main .event .previous p, main .event .previous .meetings{
@@ -176,14 +182,35 @@ main .event{
 		main .event .previous p{
 			font-size: 10px;
 			letter-spacing: 5px;
-			width: 10%;
+			width: 15%;
 			text-transform: uppercase;
 			font-family: 'High Pixel', Arial, sans-serif;
+			padding: 0 1.5em;
+			overflow: hidden;
 		}
+
+		main .event .previous p.more{
+			display: block;
+			text-align: right;
+		}
+
+		main .event .previous p.more:hover a{
+			border-color: transparent;
+		}
+
+			main .event .previous p.more a{
+				padding-left: 5px;
+				display: inline-block;
+				color: #F5F5F5;
+				text-decoration: none;
+				border-bottom: 2px solid #8A8585
+			}
+
+			
 
 		main .event .previous .meetings{	
 			padding: 0 20px;
-			width: 30%;
+			width: 23.33%;
 			text-align: right;
 			border-right: 2px solid rgba(255, 255, 255, 0.05);
 			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
