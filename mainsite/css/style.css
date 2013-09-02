@@ -32,8 +32,18 @@
 }
 
 body{
-	background: #6DA479;
+	background: #6DA46D;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+#background-images{
+	z-index: -1337;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 200px;
 }
 
 header{
@@ -151,17 +161,18 @@ main .event{
 			}
 
 				.more-info{
+					padding: 0 5px;
 					text-transform: uppercase;
 					font-family: 'High Pixel', Helvetica, Arial, sans-serif;
 					font-size: .5em;					
 					display: inline-block;
 					color: #222;
 					text-decoration: none;
-					border-bottom: 3px solid #8A8585;
+					border-bottom: 3px solid #CFC679;
 				}
 
 				.more-info:hover{
-					border-color: transparent;
+					border-color: #DDD;
 				}
 
 				.ordinal-suffix{
@@ -195,7 +206,7 @@ main .event{
 		}
 
 		main .event .previous p.more:hover a{
-			border-color: transparent;
+			border-color: #CFC679;
 		}
 
 			main .event .previous p.more a{
@@ -204,9 +215,7 @@ main .event{
 				color: #F5F5F5;
 				text-decoration: none;
 				border-bottom: 2px solid #8A8585
-			}
-
-			
+			}			
 
 		main .event .previous .meetings{	
 			padding: 0 20px;
