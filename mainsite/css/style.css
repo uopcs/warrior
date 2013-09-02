@@ -268,27 +268,47 @@ main .archive{
 		background: rgb(41, 41, 41);
 	}
 
-	main .archive h1{
-		text-align: center;
-		font-size: 1em;
-		width: 25%;
+	main .archive .event-name{
+		padding: 0 10px;
+		text-align: right;
+		width: 20%;
 		float: left;
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+		border-right: 2px solid rgba(255, 255, 255, 0.05);
 	}
+
+		main .archive .event-name h1{
+				color: #F5F5F5;
+				font-size: 1em;
+			}
+
+		main .archive .event-name h2{
+			color: rgb(175,175,175);
+			font-size: 0.7em;
+			font-weight: 500;
+		}
 
 	main .archive .details{
 		display: inline-block;
-		width: 75%;
+		width: 80%;
 	}
 
 		main .archive .details .col{
-			width: 20%;
+			width: 15%;
 			float: left;
+			padding: 0 1em;
+		}
+
+		main .archive .details .desc{
+			width: 60%;
 		}
 
 		main .archive .details .col h2{
+			margin-bottom: .25em;
+			font-size: 16px;
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-			color: white;
-			font-size: 0.8em;
+			color: #FFF;
+			text-transform: uppercase;
 		}
 
 		main .archive .details .col:nth-child(1) h2{ color: rgb(109, 129, 170); }

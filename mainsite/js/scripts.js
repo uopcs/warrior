@@ -4,7 +4,7 @@ var delay = 250;
 var lineLength = 50;
 
 drawWire(bg, 2, 250, 45, 0, 100);
-drawChip(bg, 400, 60, 120);
+drawChip(bg, 300, document.width - 170, 120);
 drawWire(bg, 0, 200, 60, 0, 250);
 
 
