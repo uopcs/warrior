@@ -118,8 +118,7 @@ main .event{
 			color: #f5f5f5;
 		}
 
-	main .event .content{		
-		padding: 0 1em;
+	main .event .content{
 		overflow: hidden;
 		background-color: #f5f5f5;
 	}
@@ -136,6 +135,14 @@ main .event{
 			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 			font-size: 2em;
 			color: rgba(0,0,0,.85);
+		}
+
+		main .event .content table tr.info-what{
+			padding: 1em 2em;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 1em;
+			color: #474747;
+			background: #E4E4E4;
 		}
 
 		main .event .content table tr:last-child{ border: none; }

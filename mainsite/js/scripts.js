@@ -1,3 +1,12 @@
+(function(){
+	$('.info-what').hide();
+
+	$('.more-info-what').click(function(e){
+		$('.info-what').slideToggle();
+		e.preventDefault();
+	});
+})();
+
 var bg = Raphael('background-images');
 
 var delay = 250;

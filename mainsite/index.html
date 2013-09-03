@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>University of Portsmouth Computing Society</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -33,15 +35,16 @@
 					
 					<tr>
 						<td class="q">What?</td>
-						<td class="a">Fresher's Fayre <a class="more-info" href="#">More details</a></td>
+						<td class="a">Fresher's Fayre <a class="more-info more-info-what" href="#">More details</a></td>
+					</tr>
+
+					<tr class="info-what">
+						<td>The single biggest Freshers Fayre in the country (we think) comes to Portsmouth on the 18th and 19th September. Come and find out more about one of our sports clubs, societies, media groups, volunteering opportunities, local businesses, national businesses, eat free Dominos Pizza and get your NUS Extra Card all in one day.</td>
 					</tr>
 
 					<tr>
-						<td>The single biggest Freshers Fayre in the country (we think) comes to Portsmouth on the 18th and 19th September. Come and find out more about one of our sports clubs, societies, media groups, volunteering opportunities, local businesses, national businesses, eat free Dominos Pizza and get your NUS Extra Card all in one day.</td>
-					</tr>
-					<tr>
 						<td class="q">Where?</td>
-						<td class="a">Ravelin Park <a class="more-info" href="#">Map</a></td>
+						<td class="a">Ravelin Park <a class="more-info more-info-map" href="#">Map</a></td>
 					</tr>
 
 					<tr>
@@ -221,7 +224,9 @@
 	<footer>		
 	</footer>
 
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/raphael.js"></script>
+	<script type="text/javascript" src="js/leaflet.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
