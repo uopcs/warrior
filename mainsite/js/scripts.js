@@ -1,8 +1,14 @@
 (function(){
 	$('.info-what').hide();
+	$('.archive').hide();
 
 	$('.more-info-what').click(function(e){
 		$('.info-what').slideToggle();
+		e.preventDefault();
+	});
+
+	$('.previous .more').click(function(e){
+		$('.archive').slideToggle();
 		e.preventDefault();
 	});
 })();

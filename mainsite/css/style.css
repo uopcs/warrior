@@ -82,6 +82,11 @@ header .title{
 
 	header .title .logo:hover{ opacity: .8; }
 
+main{
+	width: 70%;
+	margin: 0 auto;
+}
+
 main .event, main .archive{
 	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
@@ -90,162 +95,157 @@ main .event, main .archive{
 	event section
 					*/
 
-main .event{
-	margin: 0 auto;
-	width: 70%;
+main .event .top, main .event .content, main .event .previous, main .archive{
+	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
 }
 
-	main .event .top, main .event .content, main .event .previous, main .archive{
-		border-bottom: 5px solid rgba(25, 25, 25, 0.2);
-	}
+main .event .top, main .event .previous{
+	padding: 1em;
+	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+	background: rgb(41, 41, 41);
+}
 
-	main .event .top, main .event .previous{
-		padding: 1em;
-		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-		background: rgb(41, 41, 41);
-	}
+main .event .top{
+	padding: .25em 1em;
+}
 
-	main .event .top{
-		padding: .25em 1em;
-	}
-
-		main .event .top h1{
-			letter-spacing: 30px;
-			text-transform: uppercase;
-			text-align: center;
-			font-size: 40px;
-			font-family: 'High Pixel', Arial, sans-serif;
-			color: #f5f5f5;
-		}
-
-	main .event .content{
-		overflow: hidden;
-		background-color: #f5f5f5;
-	}
-
-		main .event .content table{
-			width: 100%;
-		}
-
-		main .event .content table tr{
-			display: block;
-			overflow: hidden;
-			padding: 15px 0;
-			border-bottom: 2px solid rgba(25, 25, 25, 0.1);
-			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-			font-size: 2em;
-			color: rgba(0,0,0,.85);
-		}
-
-		main .event .content table tr.info-what{
-			padding: 1em 2em;
-			font-family: Helvetica, Arial, sans-serif;
-			font-size: 1em;
-			color: #474747;
-			background: #E4E4E4;
-		}
-
-		main .event .content table tr:last-child{ border: none; }
-
-			main .event .content table td{
-				display: inline-block;
-				text-align: right;
-			}
-
-			main .event .content table td.q{
-				width: 20%;
-				padding-right: 10px;
-				border-right: 2px solid rgba(25, 25, 25, 0.1);
-			}
-
-			main .event .content .col td.a{
-				width: 80%;
-				padding-left: 10px;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				color: rgb(29, 29, 29);
-			}
-
-				.more-info{
-					padding: 0 5px;
-					text-transform: uppercase;
-					font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-					font-size: .5em;					
-					display: inline-block;
-					color: #222;
-					text-decoration: none;
-					border-bottom: 3px solid #CFC679;
-				}
-
-				.more-info:hover{
-					border-color: #DDD;
-				}
-
-				.ordinal-suffix{
-					font-size: .5em;
-					vertical-align: super;
-				}
-
-	main .event .previous{
+	main .event .top h1{
+		letter-spacing: 30px;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 40px;
+		font-family: 'High Pixel', Arial, sans-serif;
 		color: #f5f5f5;
-		overflow: hidden;
-		padding: 1em 0;
 	}
 
-		main .event .previous p, main .event .previous .meetings{
-			float: left;
+main .event .content{
+	overflow: hidden;
+	background-color: #f5f5f5;
+}
+
+	main .event .content table{
+		width: 100%;
+	}
+
+	main .event .content table tr{
+		display: block;
+		overflow: hidden;
+		padding: 15px 0;
+		border-bottom: 2px solid rgba(25, 25, 25, 0.1);
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+		font-size: 2em;
+		color: rgba(0,0,0,.85);
+	}
+
+	main .event .content table tr.info-what{
+		padding: 1em 2em;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 1em;
+		color: #474747;
+		background: #E4E4E4;
+	}
+
+	main .event .content table tr:last-child{ border: none; }
+
+		main .event .content table td{
+			display: inline-block;
+			text-align: right;
 		}
 
-		main .event .previous p{
-			font-size: 10px;
-			letter-spacing: 5px;
-			width: 15%;
-			text-transform: uppercase;
-			font-family: 'High Pixel', Arial, sans-serif;
-			padding: 0 1.5em;
+		main .event .content table td.q{
+			width: 20%;
+			padding-right: 10px;
+			border-right: 2px solid rgba(25, 25, 25, 0.1);
+		}
+
+		main .event .content .col td.a{
+			width: 80%;
+			padding-left: 10px;
+			white-space: nowrap;
 			overflow: hidden;
+			text-overflow: ellipsis;
+			color: rgb(29, 29, 29);
 		}
 
-		main .event .previous p.more{
-			display: block;
-			text-align: right;
-		}
-
-		main .event .previous p.more:hover a{
-			border-color: #CFC679;
-		}
-
-			main .event .previous p.more a{
-				padding-left: 5px;
+			.more-info{
+				padding: 0 5px;
+				text-transform: uppercase;
+				font-family: 'High Pixel', Helvetica, Arial, sans-serif;
+				font-size: .5em;					
 				display: inline-block;
-				color: #F5F5F5;
+				color: #222;
 				text-decoration: none;
-				border-bottom: 2px solid #8A8585
-			}			
+				border-bottom: 3px solid #CFC679;
+			}
 
-		main .event .previous .meetings{	
-			padding: 0 20px;
-			width: 23.33%;
-			text-align: right;
-			border-right: 2px solid rgba(255, 255, 255, 0.05);
-			font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-		}
+			.more-info:hover{
+				border-color: #DDD;
+			}
 
-		main .event .previous .meetings:last-child{
-			border: none;
-			padding: 0;
-		}
+			.ordinal-suffix{
+				font-size: .5em;
+				vertical-align: super;
+			}
 
-				main .event .previous .meetings h2{
-					font-size: 1em;
-				}
+main .event .previous{
+	color: #f5f5f5;
+	overflow: hidden;
+	padding: 1em 0;
+}
 
-				main .event .previous .meetings h3{
-					color: rgb(175, 175, 175);
-					font-size: 0.7em;
-					font-weight: 500;
-				}
+	main .event .previous p, main .event .previous .meetings{
+		float: left;
+	}
+
+	main .event .previous p{
+		font-size: 10px;
+		letter-spacing: 5px;
+		width: 15%;
+		text-transform: uppercase;
+		font-family: 'High Pixel', Arial, sans-serif;
+		padding: 0 1.5em;
+		overflow: hidden;
+	}
+
+	main .event .previous p.more{
+		display: block;
+		text-align: right;
+	}
+
+	main .event .previous p.more:hover a{
+		border-color: #CFC679;
+	}
+
+		main .event .previous p.more a{
+			padding-left: 5px;
+			display: inline-block;
+			color: #F5F5F5;
+			text-decoration: none;
+			border-bottom: 2px solid #8A8585
+		}			
+
+	main .event .previous .meetings{	
+		padding: 0 20px;
+		width: 23.33%;
+		text-align: right;
+		border-right: 2px solid rgba(255, 255, 255, 0.05);
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+	}
+
+	main .event .previous .meetings:last-child{
+		border: none;
+		padding: 0;
+	}
+
+			main .event .previous .meetings h2{
+				font-size: 1em;
+			}
+
+			main .event .previous .meetings h3{
+				color: rgb(175, 175, 175);
+				font-size: 0.7em;
+				font-weight: 500;
+			}
 
 /*
 	archive
@@ -255,8 +255,6 @@ main .archive{
 	overflow: hidden;
 	padding: 1em 0;
 	background: rgb(41, 41, 41);
-	margin: 5% auto 0;
-	width: 70%;
 }
 	main .archive .meeting{
 		padding: 1em 0;
@@ -330,36 +328,46 @@ main .archive{
 			font-size: 0.8em;			
 		}
 
-@media all and (max-width: 640px) {
-	main .archive h1{
-		width: 100%;
-		float: none;
-		margin-bottom: 0.5em;
-	}
-	main .archive .details{
-		padding-left: 2em;
-		width: 90%;
-	}
-	.details .col ul li {
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+.social{
+	padding-bottom: 5px;
+	overflow: hidden;
+	margin: 30px 0;
 }
 
+.social .social-button{
+	float: left;
+	height: 100px;
+	width: 20%;
+	display: block;
+	font-family: 'High Pixel', Helvetica, Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: .25em 0;
+	box-shadow: inset 0 -5px 0 rgba(25,25,25,.25), 0 5px 0 rgba(25,25,25,.25);
+}
 
-/* 
-	news, social and previous events section
-											*/
+.social-button:hover{
+	margin-top: 5px;
+	box-shadow: inset 0 -5px 0 rgba(25,25,25,.25);
+}
 
-main .wrap{
-	padding: 2.5% 0;
-	margin-top: 11%;
+.social .join-us{
+	width: 60%;
+	font-size: 2.5em;
+	background: #79DA4C;
+}
+
+.social .facebook{ background-color: #3B5998; }
+.social .twitter{ background-color: #4099FF; }
+
+
 /*
 	footer
 			*/
 
 footer{
-	padding: 2.5em 5em 4em;
 	width: 100%;
 	background: rgb(41, 41, 41);
 }
