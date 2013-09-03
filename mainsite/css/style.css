@@ -55,14 +55,14 @@ header{
 }
 
 header .title{
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 	header .title span{
 		float: left;
-		width: 15%;		
+		width: 20%;		
 		padding: 25px 10px;
 		text-transform: uppercase;
 		font-size: 20px;
@@ -72,12 +72,13 @@ header .title{
 	header .title span:first-child{ text-align: right; }
 
 	header .title .logo{
-		width: 70%;
+		width: 60%;
 		text-indent: -2345px;
 		float: left;
 		min-height: 100px;
 		padding: 30px 0;
 		background: url('../img/logodull.png') center no-repeat;
+		background-size: 100%;
 	}
 
 	header .title .logo:hover{ opacity: .8; }
@@ -100,7 +101,6 @@ main .event .top, main .event .content, main .event .previous, main .archive{
 }
 
 main .event .top, main .event .previous{
-	padding: 1em;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	background: rgb(41, 41, 41);
 }
@@ -190,7 +190,6 @@ main .event .content{
 main .event .previous{
 	color: #f5f5f5;
 	overflow: hidden;
-	padding: 1em 0;
 }
 
 	main .event .previous p, main .event .previous .meetings{
@@ -203,13 +202,17 @@ main .event .previous{
 		width: 15%;
 		text-transform: uppercase;
 		font-family: 'High Pixel', Arial, sans-serif;
-		padding: 0 1.5em;
+		padding: 1.5em;
 		overflow: hidden;
 	}
 
 	main .event .previous p.more{
 		display: block;
 		text-align: right;
+	}
+
+	main .event .previous p.more:hover{
+
 	}
 
 	main .event .previous p.more:hover a{
@@ -225,11 +228,17 @@ main .event .previous{
 		}			
 
 	main .event .previous .meetings{	
-		padding: 0 20px;
+		padding: 10px;
 		width: 23.33%;
 		text-align: right;
-		border-right: 2px solid rgba(255, 255, 255, 0.05);
+		border-right: 2px solid rgba(255,255,255,.05);
 		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+	}
+
+	main .event .previous p.more:hover,
+	main .event .previous .meetings:hover{	
+		background: rgba(255,255,255,.05);
+		cursor: pointer;
 	}
 
 	main .event .previous .meetings:last-child{
@@ -312,15 +321,13 @@ main .archive{
 			margin-bottom: .25em;
 			font-size: 16px;
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-			color: #FFF;
+			color: #F5F5F5;
 			text-transform: uppercase;
 		}
 
-		main .archive .details .col:nth-child(1) h2{ color: rgb(109, 129, 170); }
-		main .archive .details .col:nth-child(2) h2{ color: rgb(148, 102, 102); }
-		main .archive .details .col:nth-child(3) h2{ color: rgb(184, 150, 107); }
-		main .archive .details .col:nth-child(4) h2{ color: rgb(100, 153, 117); }		
-		main .archive .details .col:nth-child(5) h2{ color: rgb(129, 109, 158); }		
+		main .archive .details .col:nth-child(1) h2{ color: #79A6CF }
+		main .archive .details .col:nth-child(2) h2{ color: #CF7979 }
+		main .archive .details .col:nth-child(3) h2{ color: #CFC679; }	
 
 		main .archive .details .col ul li{
 			list-style: none;

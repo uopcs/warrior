@@ -7,7 +7,7 @@
 		e.preventDefault();
 	});
 
-	$('.previous .more').click(function(e){
+	$('.previous').find('.meetings,.more').click(function(e){
 		$('.archive').slideToggle();
 		e.preventDefault();
 	});
@@ -19,8 +19,8 @@ var delay = 250;
 var lineLength = 50;
 
 drawWire(bg, 2, 250, 45, 0, 100);
-drawChip(bg, 300, document.width - 170, 120);
 drawWire(bg, 0, 200, 60, 0, 250);
+drawChip(bg, 300, document.width - 170, 120);
 
 
 function drawChip(bg, delay, x, y){
