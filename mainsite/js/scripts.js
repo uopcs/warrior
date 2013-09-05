@@ -10,6 +10,9 @@
 	$('.previous').find('.meetings,.more').click(function(e){
 		$('.archive').slideToggle();
 		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $(".archive").offset().top
+		}, 500);
 	});
 })();
 
