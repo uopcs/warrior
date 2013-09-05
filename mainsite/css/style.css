@@ -145,20 +145,26 @@ main .event .content{
 		background: #E4E4E4;
 	}
 
+	main .event .content table tr.info-what td{
+		display: block;
+		text-align: center;
+	}
+
 	main .event .content table tr:last-child{ border: none; }
 
 		main .event .content table td{
 			display: inline-block;
-			text-align: right;
 		}
 
 		main .event .content table td.q{
+			text-align: right;
 			width: 20%;
 			padding-right: 10px;
 			border-right: 2px solid rgba(25, 25, 25, 0.1);
 		}
 
 		main .event .content .col td.a{
+			text-align: left;
 			width: 80%;
 			padding-left: 10px;
 			white-space: nowrap;
@@ -308,7 +314,7 @@ main .archive{
 	}
 
 		main .archive .details .col{
-			width: 15%;
+			width: 20%;
 			float: left;
 			padding: 0 1em;
 		}
