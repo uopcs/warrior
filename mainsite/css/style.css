@@ -88,7 +88,7 @@ main{
 	margin: 0 auto;
 }
 
-main .event, main .archive{
+main .event, main .archive, main .socials-section{
 	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
 
@@ -96,7 +96,7 @@ main .event, main .archive{
 	event section
 					*/
 
-main .event .top, main .event .content, main .event .previous, main .archive{
+main .event .top, main .event .content, main .event .previous, main .archive, main .socials-section{
 	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
 }
 
@@ -341,6 +341,17 @@ main .archive{
 			color: white;
 			font-size: 0.8em;			
 		}
+
+main .socials-section{
+	margin-top: 20px;
+	padding: 20px;
+	text-align: center;
+	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+	font-size: 1.25em;
+	overflow: hidden;
+	color: #2c2c2c;
+	background-color: #f5f5f5;
+}
 
 .social{
 	padding-bottom: 5px;
