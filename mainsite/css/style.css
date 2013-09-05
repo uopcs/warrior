@@ -199,10 +199,10 @@ main .event .previous{
 	main .event .previous p{
 		font-size: 10px;
 		letter-spacing: 5px;
-		width: 15%;
+		width: 20%;
 		text-transform: uppercase;
 		font-family: 'High Pixel', Arial, sans-serif;
-		padding: 1.5em;
+		padding: 1.5em 2.5em;
 		overflow: hidden;
 	}
 
@@ -229,7 +229,7 @@ main .event .previous{
 
 	main .event .previous .meetings{	
 		padding: 10px;
-		width: 23.33%;
+		width: 20%;
 		text-align: right;
 		border-right: 2px solid rgba(255,255,255,.05);
 		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
