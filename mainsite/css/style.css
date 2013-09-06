@@ -32,7 +32,10 @@
 }
 
 body{
-	background: #6DA46D;
+	background-color: #6DA46D;
+	background-image: url('../img/circuit.svg');
+	background-size: 25%;
+
 	font-family: Helvetica, Arial, sans-serif;
 }
 
