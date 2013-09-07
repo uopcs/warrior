@@ -3,16 +3,13 @@
 	$('.archive').hide();
 
 	$('.more-info-what').click(function(e){
-		$('.info-what').slideToggle();
+		$('.info-what').slideToggle(100);
 		e.preventDefault();
 	});
 
 	$('.previous').find('.meetings,.more').click(function(e){
-		$('.archive').slideToggle();
+		$('.archive').slideToggle(250);
 		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $(".archive").offset().top
-		}, 500);
 	});
 })();
 
