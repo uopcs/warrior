@@ -41,7 +41,7 @@ body{
 
 #background-images{
 	z-index: -1337;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
