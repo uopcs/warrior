@@ -381,11 +381,13 @@ main .socials-section{
 }
 
 .social-button:active{
-	-webkit-transform: translateY(8px);
-	transform: translateY(8px);
+	-webkit-transform: translateY(7px);
+	transform: translateY(7px);
 
 	height: 97px;
 	box-shadow: inset 0 -3px 0 rgba(25,25,25,.25);
+
+	background-position: 0 0%;
 }
 
 .social .join-us{
