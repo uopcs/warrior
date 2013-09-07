@@ -277,19 +277,8 @@ main .archive{
 
 	main .archive .meeting{
 		padding: 1em 0;
-	}
 
-	main .archive .meeting:nth-child(1){		
-		border-top: 5px dashed rgb(41, 41, 41);
-	}
-
-	main .archive .meeting:nth-child(odd){
-		border-bottom: 5px dashed rgb(41, 41, 41);
-		background: rgb(49, 51, 50);
-	}
-	main .archive .meeting:nth-child(even){
-		border-bottom: 5px dashed rgb(49, 51, 50);
-		background: rgb(41, 41, 41);
+		background: rgb(41, 41, 41);		
 	}
 
 	main .archive .event-name{
