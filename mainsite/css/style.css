@@ -87,6 +87,7 @@ header .title{
 		float: left;
 		background: url("http://192.168.0.8/warrior/mainsite/css/../img/logodull.png") center no-repeat;
 		background-size: 100%;
+		transition: opacity .1s;
 	}
 
 	header .title .logo:hover{ opacity: .8; }
@@ -587,7 +588,7 @@ footer{
 		width: 50%;
 		text-align: center;
 		margin: 0 auto;
-	}
+	} 
 
 	.archive .event-name,
 	.archive .details,
@@ -603,7 +604,5 @@ footer{
 	}
 
 	.archive .details .desc{ padding: 0 .5em 1em; }
-
-	
 	
 }
