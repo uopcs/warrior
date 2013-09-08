@@ -36,7 +36,7 @@
 }
 
 body{
-	overflow: hidden;
+	overflow-x: hidden;
 	background-color: #6DA46D;
 	background-image: url('../img/circuit.svg');
 	font-family: Helvetica, Arial, sans-serif;
