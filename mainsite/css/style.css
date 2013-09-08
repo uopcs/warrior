@@ -22,6 +22,10 @@
     font-style: normal;       
 }
 
+.clearfix {
+	clear: both;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -57,7 +61,6 @@ header{
 header .title{
 	width: 80%;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 	header .title span{
@@ -89,7 +92,7 @@ main{
 	margin: 0 auto;
 }
 
-main .event, main .archive, main .socials-section{
+ .archive, .socials-section{
 	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
 
@@ -97,34 +100,34 @@ main .event, main .archive, main .socials-section{
 	event section
 					*/
 
-main .event .top, main .event .content, main .event .previous, main .archive, main .socials-section{
+.top, .content, .previous, .archive, .socials-section{
 	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
 }
 
-main .event .top, main .event .previous{
+.top, .previous{
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	background: rgb(41, 41, 41);
 }
 
-main .event .top{
+.top{
 	padding: .25em 1em;
 }
 
-	main .event .top h1{
-		letter-spacing: 30px;
+	.top h1{
+		letter-spacing: .75em;
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 40px;
+		font-size: 2.5em;
 		font-family: 'High Pixel', Arial, sans-serif;
 		color: #f5f5f5;
 	}
 
-main .event .content{
+.content{
 	overflow: hidden;
 	background-color: #f5f5f5;
 }
 
-	main .event .content .row{
+	.content .row{
 		overflow: hidden;
 		padding: 15px 0;
 		border-bottom: 2px solid rgba(25, 25, 25, 0.1);
@@ -133,12 +136,14 @@ main .event .content{
 		color: rgba(0,0,0,.85);
 	}
 
-	main .event .content .map-row{
+	.content .row:last-child{ border: none; }
+
+	.content .map-row{
 		position: relative;
 		padding: 0;
 	}
 
-	main .event .content .map-row #map{
+	.content .map-row #map{
 		height: 350px;
 	}
 
@@ -216,9 +221,9 @@ main .event .content{
 
 	.leaflet-container:-webkit-full-screen { width: 100% !important; height: 100% !important; }
 
-	main .event .content .row:last-child{ border: none; }
+	.content .row:last-child{ border: none; }
 
-	main .event .content .info-what{
+	.content .info-what{
 		padding: 1em 2em;
 		font-family: Helvetica, Arial, sans-serif;
 		font-size: 1em;
@@ -226,23 +231,23 @@ main .event .content{
 		background: #E4E4E4;
 	}
 
-		main .event .content .col{			
+		.content .col{			
 			float: left;
 		}
 
-		main .event .content .info-what .col{
+		.content .info-what .col{
 			width: 100%;
 			text-align: center;
 		}
 
-		main .event .content .q{
+		.content .q{
 			text-align: right;
 			width: 20%;
-			padding-right: 10px;
+			padding: 0 .4em;
 			border-right: 2px solid rgba(25, 25, 25, 0.1);
 		}
 
-		main .event .content .a{
+		.content .a{
 			text-align: left;
 			width: 80%;
 			padding-left: 10px;
@@ -273,32 +278,33 @@ main .event .content{
 				vertical-align: super;
 			}
 
-main .event .previous{
+.previous{
 	color: #f5f5f5;
-	overflow: hidden;
+	height: 4em;
 }
 
-	main .event .previous p, main .event .previous .meetings{
+	.previous p, .previous .meetings{
 		float: left;
 	}
 
-	main .event .previous p{
+	.previous p{
 		font-size: 10px;
 		letter-spacing: 5px;
 		width: 20%;
+		height: 100%;
 		text-transform: uppercase;
 		font-family: 'High Pixel', Arial, sans-serif;
 		padding: 1.5em 2.5em;
 		overflow: hidden;
 	}
 
-	main .event .previous p.more{
+	.previous p.more{
 		display: block;
 		text-align: right;
 		transition: background .1s;
 	}
 
-		main .event .previous p.more a{
+		.previous p.more a{
 			padding-left: 5px;
 			display: inline-block;
 			color: #F5F5F5;
@@ -307,11 +313,11 @@ main .event .previous{
 			transition: border-color .1s;
 		}
 
-		main .event .previous p.more:hover a{
+		.previous p.more:hover a{
 			border-color: #CFC679;
 		}
 
-	main .event .previous .meetings{	
+	.previous .meetings{	
 		padding: 10px;
 		width: 20%;
 		text-align: right;
@@ -320,22 +326,22 @@ main .event .previous{
 		transition: background .1s;
 	}
 
-	main .event .previous p.more:hover,
-	main .event .previous .meetings:hover{	
+	.previous p.more:hover,
+	.previous .meetings:hover{	
 		background: rgba(255,255,255,.05);
 		cursor: pointer;
 	}
 
-	main .event .previous .meetings:last-child{
+	.previous .meetings:last-child{
 		border: none;
 		padding: 0;
 	}
 
-			main .event .previous .meetings h2{
+			.previous .meetings h2{
 				font-size: 1em;
 			}
 
-			main .event .previous .meetings h3{
+			.previous .meetings h3{
 				color: rgb(175, 175, 175);
 				font-size: 0.7em;
 				font-weight: 500;
@@ -345,19 +351,24 @@ main .event .previous{
 	archive
 			*/
 
-main .archive{
+.archive{
 	overflow: hidden;
 	padding: 1em 0;
 	background: rgb(41, 41, 41);
 }
 
-	main .archive .meeting{
+	.archive .meeting{
 		padding: 1em 0;
 
 		background: rgb(41, 41, 41);		
 	}
+	.archive .meeting:nth-child(odd){
+		background: #242424;
+		border-top: 5px dashed #292929;
+		border-bottom: 5px dashed #292929;
+	}
 
-	main .archive .event-name{
+	.archive .event-name{
 		padding: 0 10px;
 		text-align: right;
 		width: 20%;
@@ -366,33 +377,33 @@ main .archive{
 		border-right: 2px solid rgba(255, 255, 255, 0.05);
 	}
 
-		main .archive .event-name h1{
+		.archive .event-name h1{
 				color: #F5F5F5;
 				font-size: 1em;
 			}
 
-		main .archive .event-name h2{
+		.archive .event-name h2{
 			color: rgb(175,175,175);
 			font-size: 0.7em;
 			font-weight: 500;
 		}
 
-	main .archive .details{
+	.archive .details{
 		display: inline-block;
 		width: 80%;
 	}
 
-		main .archive .details .col{
+		.archive .details .col{
 			width: 20%;
 			float: left;
-			padding: 0 1em;
+			padding: 0 .5em;
 		}
 
-		main .archive .details .desc{
+		.archive .details .desc{
 			width: 60%;
 		}
 
-		main .archive .details .col h2{
+		.archive .details .col h2{
 			margin-bottom: .25em;
 			font-size: 16px;
 			font-family: 'High Pixel', Helvetica, Arial, sans-serif;
@@ -400,17 +411,17 @@ main .archive{
 			text-transform: uppercase;
 		}
 
-		main .archive .details .col:nth-child(1) h2{ color: #79A6CF }
-		main .archive .details .col:nth-child(2) h2{ color: #CF7979 }
-		main .archive .details .col:nth-child(3) h2{ color: #CFC679; }	
+		.archive .details .col:nth-child(1) h2{ color: #79A6CF }
+		.archive .details .col:nth-child(2) h2{ color: #CF7979 }
+		.archive .details .col:nth-child(3) h2{ color: #CFC679; }	
 
-		main .archive .details .col ul li{
+		.archive .details .col ul li{
 			list-style: none;
 			color: white;
 			font-size: 0.8em;			
 		}
 
-main .socials-section{
+.socials-section{
 	margin-top: 20px;
 	padding: 20px;
 	text-align: center;
@@ -436,8 +447,9 @@ main .socials-section{
 
 .social .social-button{
 	display: block;
-	height: 100px;
+	height: 2.5em;
 	font-family: 'High Pixel', Helvetica, Arial, sans-serif;
+	font-size: 3em;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -454,10 +466,10 @@ main .socials-section{
 }
 
 .social-button:active{
-	transform: translateY(7px);
+	-webkit-transform: translateY(10px);
+	transform: translateY(10px);
 
-	height: 97px;
-	box-shadow: inset 0 -3px 0 rgba(25,25,25,.25);
+	height: 2.4em;
 
 	background-position: 0 0%;
 }
@@ -465,7 +477,6 @@ main .socials-section{
 .social .join-us{
 	padding: 0 0 0 2em;
 	width: 70%;
-	font-size: 2.5em;
 }
 
 .social .join-us .social-button{
@@ -497,4 +508,53 @@ main .socials-section{
 footer{
 	width: 100%;
 	background: rgb(41, 41, 41);
+}
+
+/* Media queries */
+
+@media (min-width: 700px) and (max-width: 900px) {/*
+	body {
+		background: red;
+	}*/
+	.top,
+	.content .q,
+	.content .a,
+	.social
+		{ font-size: .75em; }
+
+	.previous .meetings { display: block; }
+	.previous .meetings:nth-child(3) { display: none; }
+
+	.previous p,
+	.previous .meetings {
+		width: 25%;
+	}
+
+	.archive .details { width: 65%; }
+	.archive .event-name { width: 30%; }
+	.archive .col-desc { width: 50%; }
+
+}
+@media (max-width: 699px) {/*
+	body {
+		background: green;
+	}*/
+	.top,
+	.content .q,
+	.content .a,
+	.social
+		{ font-size: .6em; }
+
+	.previous .meetings { display: none; }
+	.previous .meetings:nth-child(2) { display: block; }
+
+	.previous p,
+	.previous .meetings {
+		width: 33%;
+	}
+
+	.archive .details { width: 60%; }
+	.archive .details .col { width: 50%; }
+	.archive .event-name { width: 30%; }	
+
 }
