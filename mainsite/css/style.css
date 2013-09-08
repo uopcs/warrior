@@ -139,6 +139,7 @@ main{
 	.content .row:last-child{ border: none; }
 
 	.content .map-row{
+		display: none;
 		position: relative;
 		padding: 0;
 	}
@@ -284,14 +285,14 @@ main{
 }
 
 	.previous p, .previous .meetings{
-		float: left;
+		float: left;		
+		height: 100%;
 	}
 
 	.previous p{
 		font-size: 10px;
 		letter-spacing: 5px;
 		width: 20%;
-		height: 100%;
 		text-transform: uppercase;
 		font-family: 'High Pixel', Arial, sans-serif;
 		padding: 1.5em 2.5em;
