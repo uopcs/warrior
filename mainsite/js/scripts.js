@@ -71,9 +71,6 @@ drawWire(bg, 2, 250, 45, 0, 100);
 drawWire(bg, 0, 200, 60, 0, 250);
 drawChip(bg, 300, $(document).width() - 170, 120);
 
-
-
-
 function drawChip(bg, delay, x, y){
 
 	var ease =  'bounce';
