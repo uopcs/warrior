@@ -421,10 +421,14 @@ main{
 		.archive .details .col:nth-child(2) h2{ color: #CF7979 }
 		.archive .details .col:nth-child(3) h2{ color: #CFC679; }	
 
+		.archive .details .col p,
+		.archive .details .col ul li{	
+			font-size: 0.8em;			
+			color: white;
+		}
+
 		.archive .details .col ul li{
 			list-style: none;
-			color: white;
-			font-size: 0.8em;			
 		}
 
 .socials-section{
