@@ -514,9 +514,6 @@ footer{
 /* Media queries */
 
 @media (min-width: 700px) and (max-width: 900px) {
-	body {
-		background: red;
-	}
 	.top,
 	.content .q,
 	.content .a,
@@ -536,9 +533,6 @@ footer{
 
 }
 @media (max-width: 699px) {
-	body {
-		background: green;
-	}
 	.top,
 	.content .q,
 	.content .a,
