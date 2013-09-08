@@ -493,6 +493,7 @@ main {
 
 .text-section {
 	margin: 1em 0;
+	padding: .5em 0;
 	text-align: center;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	overflow: hidden;
@@ -501,8 +502,11 @@ main {
 }
 
 .text-section p{
-	line-height: 1.5;
-	padding: 1em;
+	width: 70%;
+	margin: 0 auto;
+	font-size: 1.15em;
+	line-height: 1.25;
+	padding: .25em 1em;
 }
 
 .social {
@@ -622,6 +626,11 @@ footer {
 
 @media (max-width: 699px) {
 	header {
+		font-size: 1em;
+	}
+
+	.text-section p{
+		width: 100%;
 		font-size: 1em;
 	}
 
