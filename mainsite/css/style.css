@@ -167,10 +167,6 @@ main .event .content{
 		width: 150px;
 	}
 
-	.leaflet-map-pane{
-		/*opacity: .8;*/
-	}
-
 	.leaflet-container .leaflet-control-zoom{
 		border: 2px solid rgba(0, 0, 0, 0.25);
 		display: none;
@@ -187,15 +183,23 @@ main .event .content{
 		box-shadow: none;
 		background-color: rgba(41,41,41,.75);
 		color: #F5F5F5;
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	}
 
 	#map:hover .leaflet-control-attribution{ display: block; }
 
-	.leaflet-control-attribution a,
-	.leaflet-popup-content a{
-		color: #F5F5F5;
+	.leaflet-control-attribution a{
+		color: #ECEC9A;
 		text-decoration: none;
 	}
+
+	.leaflet-popup-content a{
+		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+		color: #414141;
+		text-decoration: none;
+	}
+
+	.leaflet-popup-content a:hover{ border-bottom: 2px solid; }
 
 	.leaflet-control-zoom-fullscreen {
 		background-color: rgba(255, 255, 255, 0.8);
