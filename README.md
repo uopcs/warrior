@@ -6,23 +6,19 @@ code and shit for UoPCS
 
 tempsite
 --------
-That beautiful mars landing site... it's beautiful
+that beautiful mars landing site... it's beautiful
 
 images
 ------
-Images for the Facebook events, twitter and more
-
-*this is only here because we don't have a home for it yet!*
+imagery for the Facebook events, twitter and more
 
 mainsite
 --------
-What is says on the tin
 
-using:
+we're using:
 
-prefixfree
-leaflet
-opensourcemaps german map tiles
-https://github.com/brunob/leaflet.fullscreen
-raphael
-jquery
++ [jQuery](http://jquery.com/) - obvious uses
++ [Leaflet](http://leafletjs.com/) - for our mapping! 
+    + ([OpenSourceMaps](http://www.openstreetmap.org/) for the German-style map tiles)
+    + brunob's Leaflet ([Fullscreen code](https://github.com/brunob/leaflet.fullscreen)
++ [Raphaël](http://raphaeljs.com/) - For the animated SVG background

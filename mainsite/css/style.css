@@ -86,7 +86,7 @@ header .title{
 		margin: 0 .5em;
 		text-indent: -2345px;
 		float: left;
-		background: url("http://192.168.0.8/warrior/mainsite/css/../img/logodull.png") center no-repeat;
+		background: url('../img/logodull.png') center no-repeat;
 		background-size: 100%;
 		transition: opacity .1s;
 	}
@@ -322,10 +322,12 @@ main{
 			border-color: #CFC679;
 		}
 
-	.previous .meetings{	
+	.previous .meetings{
+		color: #F5F5F5;
 		padding: 10px;
 		width: 20%;
 		text-align: right;
+		text-decoration: none;
 		border-right: 2px solid rgba(255,255,255,.05);
 		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 		transition: background .1s;
