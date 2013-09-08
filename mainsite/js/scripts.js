@@ -81,7 +81,7 @@ function drawChip(bg, delay, x, y){
 				 .attr(rectAttr).attr({ fill: '#505050' })
 				 .animate({ transform: 's1' }, delay, ease);
 
-	var logo = bg.image('./img/upsu-logo.png', x + 28, y + 20, 80, 28)
+	var logo = bg.image('./img/upsu-logo.png', x + 28, y + 40, 80, 28)
 				 .attr({ transform: 's0' })
 				 .animate({ transform: 's1' }, delay, ease);
 
