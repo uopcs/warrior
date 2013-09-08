@@ -1,5 +1,6 @@
 (function(){
 	$('.info-what').hide();
+	$('.map-row').hide();
 	$('.archive').hide();
 
 	$('.more-info-what').click(function(e){
@@ -7,11 +8,34 @@
 		e.preventDefault();
 	});
 
+	$('.more-info-map').click(function(e){
+		$('.map-row').slideToggle(100);
+		e.preventDefault();
+	});
+
 	$('.previous').find('.meetings,.more').click(function(e){
 		$('.archive').slideToggle(250);
 		e.preventDefault();
 	});
+
 })();
+
+// Map
+
+var map = L.map('map', { scrollWheelZoom: false }).setView([50.797757, -1.096089], 16);
+
+L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+}).addTo(map);
+
+var fullScreen = new L.Control.FullScreen(); 
+map.addControl(fullScreen);
+
+map.panTo([50.7978, -1.09736]);
+
+// Background drawing
 
 var bg = Raphael('background-images');
 
