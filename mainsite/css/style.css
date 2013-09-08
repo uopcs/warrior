@@ -346,7 +346,6 @@ main {
 	transition: background .1s;
 }
 
-<<<<<<< HEAD
 		.previous p.more a{
 			padding-left: 5px;
 			display: inline-block;
@@ -370,17 +369,6 @@ main {
 		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 		transition: background .1s;
 	}
-=======
-.previous p.more a {
-	padding-left: 5px;
-	display: inline-block;
-	color: #F5F5F5;
-	text-decoration: none;
-	border-bottom: 2px solid #8A8585;
-	-webkit-transition: border-color .1s;
-	transition: border-color .1s;
-}
->>>>>>> 54f16fe6f0dee7b5e005761044b570fbf47b492b
 
 .previous p.more:hover a {
 	border-color: #CFC679;
