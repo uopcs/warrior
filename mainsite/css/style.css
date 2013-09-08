@@ -493,8 +493,7 @@ main {
 
 .text-section {
 	margin: 1em 0;
-	padding: .5em 0;
-	text-align: center;
+	padding: 1em .5em;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	overflow: hidden;
 	color: #2c2c2c;
@@ -502,8 +501,6 @@ main {
 }
 
 .text-section p{
-	width: 70%;
-	margin: 0 auto;
 	font-size: 1.15em;
 	line-height: 1.25;
 	padding: .25em 1em;
