@@ -114,9 +114,7 @@ main{
 	background: rgb(41, 41, 41);
 }
 
-.top{
-	padding: .25em 1em;
-}
+.top{ padding: .75em 1em; }
 
 	.top h1{
 		letter-spacing: .75em;
