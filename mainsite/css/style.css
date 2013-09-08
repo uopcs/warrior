@@ -513,10 +513,10 @@ footer{
 
 /* Media queries */
 
-@media (min-width: 700px) and (max-width: 900px) {/*
+@media (min-width: 700px) and (max-width: 900px) {
 	body {
 		background: red;
-	}*/
+	}
 	.top,
 	.content .q,
 	.content .a,
@@ -536,10 +536,10 @@ footer{
 	.archive .col-desc { width: 50%; }
 
 }
-@media (max-width: 699px) {/*
+@media (max-width: 699px) {
 	body {
 		background: green;
-	}*/
+	}
 	.top,
 	.content .q,
 	.content .a,
@@ -558,4 +558,23 @@ footer{
 	.archive .details .col { width: 50%; }
 	.archive .event-name { width: 30%; }	
 
+}
+
+@media (max-width: 500px) {
+
+	.previous .meetings:nth-child(2) { display: none; }
+	
+	.previous p{ display: none; }
+
+	.previous .more{
+		display: block;
+		width: 100%;
+	}
+	.previous p.more a {
+		display: block;
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
 }
