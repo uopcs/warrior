@@ -23,7 +23,10 @@
 
 // Map
 
-var map = L.map('map', { scrollWheelZoom: false }).setView([50.797757, -1.096089], 16);
+var portlandBuilding = new L.LatLng(50.798612, -1.099304);
+var ravelinPark = new L.LatLng(50.792454, -1.097009);
+
+var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
 
 L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 	maxZoom: 20,
@@ -34,7 +37,17 @@ L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
 
-map.panTo([50.7978, -1.09736]);
+var customMarker = L.icon({
+	iconUrl: './img/map-marker.png',
+
+	iconSize:     [24, 38], // size of the icon
+	iconAnchor:   [12, 38], // where the 'tip' is
+	popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
+});
+
+map.panTo(ravelinPark);
+var marker = L.marker(ravelinPark, {icon: customMarker }).addTo(map)
+		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=50.792549,-1.097241&hl=en&sll=50.793119,-1.094513&sspn=0.007853,0.021136&t=h&mra=ls&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
 
 // Background drawing
 
