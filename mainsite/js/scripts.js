@@ -10,6 +10,7 @@
 
 	$('.more-info-map').click(function(e){
 		$('.map-row').slideToggle(100);
+		map.invalidateSize();
 		e.preventDefault();
 	});
 
