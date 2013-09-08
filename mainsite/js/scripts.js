@@ -16,10 +16,22 @@
 
 	$('.previous').find('.meetings,.more').click(function(e){
 		$('.archive').slideToggle(250);
+		if($(this).is('.meetings')){
+			scrollPage(this);
+		}
 		e.preventDefault();
 	});
 
 })();
+
+function scrollPage(clicked){
+	var animationSpeed = 500						 // Speed of the animation in ms
+	var url = window.location.protocol + "//" + window.location.host + window.location.pathname; // Get current URL
+	var id = String(clicked).substr(url.length); // Take the URL and leave the # part
+	var scrollAmount = $(id).position().top;	// Finds the position from the top of the window for the heading with the ID 'hrefValue'
+	$('html, body').animate({scrollTop: scrollAmount}, animationSpeed); // Moves to the top of the post in 'animationSpeed'ms
+	event.preventDefault(); // Stops the link's normal behaviour
+}
 
 // Map
 
@@ -29,7 +41,6 @@ var ravelinPark = new L.LatLng(50.792454, -1.097009);
 var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
 
 L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	maxZoom: 20,
 	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 				 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
 }).addTo(map);
