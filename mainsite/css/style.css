@@ -105,7 +105,7 @@ main {
 }
 
 .archive,
-.socials-section {
+.text-section {
 	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
 
@@ -117,7 +117,7 @@ main {
 .content,
 .previous,
 .archive,
-.socials-section {
+.text-section {
 	border-bottom: 5px solid rgba(25, 25, 25, 0.2);
 }
 
@@ -491,15 +491,18 @@ main {
 	list-style: none;
 }
 
-.socials-section {
-	margin-top: 20px;
-	padding: 20px;
+.text-section {
+	margin: 1em 0;
 	text-align: center;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-	font-size: 1.25em;
 	overflow: hidden;
 	color: #2c2c2c;
 	background-color: #f5f5f5;
+}
+
+.text-section p{
+	line-height: 1.5;
+	padding: 1em;
 }
 
 .social {

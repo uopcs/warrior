@@ -69,7 +69,9 @@ var lineLength = 50;
 
 drawWire(bg, 2, 250, 45, 0, 100);
 drawWire(bg, 0, 200, 60, 0, 250);
-drawChip(bg, 300, document.width - 170, 120);
+drawChip(bg, 300, $(document).width() - 170, 120);
+
+
 
 
 function drawChip(bg, delay, x, y){
@@ -80,6 +82,10 @@ function drawChip(bg, delay, x, y){
 
 	var chip = bg.rect(x + 20, y, 100, 80)
 				 .attr(rectAttr).attr({ fill: '#505050' })
+				 .animate({ transform: 's1' }, delay, ease);
+
+	var logo = bg.image('./img/upsu-logo.png', x + 28, y + 20, 80, 28)
+				 .attr({ transform: 's0' })
 				 .animate({ transform: 's1' }, delay, ease);
 
 	// bits
