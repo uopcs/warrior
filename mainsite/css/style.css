@@ -126,12 +126,7 @@ main .event .content{
 	background-color: #f5f5f5;
 }
 
-	main .event .content table{
-		width: 100%;
-	}
-
-	main .event .content table tr{
-		display: block;
+	main .event .content .row{
 		overflow: hidden;
 		padding: 15px 0;
 		border-bottom: 2px solid rgba(25, 25, 25, 0.1);
@@ -140,7 +135,9 @@ main .event .content{
 		color: rgba(0,0,0,.85);
 	}
 
-	main .event .content table tr.info-what{
+	main .event .content .row:last-child{ border: none; }
+
+	main .event .content .info-what{
 		padding: 1em 2em;
 		font-family: Helvetica, Arial, sans-serif;
 		font-size: 1em;
@@ -148,25 +145,23 @@ main .event .content{
 		background: #E4E4E4;
 	}
 
-	main .event .content table tr.info-what td{
-		display: block;
-		text-align: center;
-	}
-
-	main .event .content table tr:last-child{ border: none; }
-
-		main .event .content table td{
-			display: inline-block;
+		main .event .content .col{			
+			float: left;
 		}
 
-		main .event .content table td.q{
+		main .event .content .info-what .col{
+			width: 100%;
+			text-align: center;
+		}
+
+		main .event .content .q{
 			text-align: right;
 			width: 20%;
 			padding-right: 10px;
 			border-right: 2px solid rgba(25, 25, 25, 0.1);
 		}
 
-		main .event .content .col td.a{
+		main .event .content .a{
 			text-align: left;
 			width: 80%;
 			padding-left: 10px;
