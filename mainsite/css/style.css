@@ -72,6 +72,7 @@ header .title{
 }
 
 	header .title span{
+		color: #303030;
 		float: left;
 		text-transform: uppercase;
 		font-size: .6em;
