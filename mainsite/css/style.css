@@ -138,6 +138,7 @@ main{
 	.content .row:last-child{ border: none; }
 
 	.content .map-row{
+		display: none;
 		position: relative;
 		padding: 0;
 	}

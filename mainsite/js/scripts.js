@@ -1,6 +1,5 @@
 (function(){
 	$('.info-what').hide();
-	$('.map-row').hide();
 	$('.archive').hide();
 
 	$('.more-info-what').click(function(e){
