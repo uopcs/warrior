@@ -533,7 +533,6 @@ footer{
 
 	.archive .details { width: 65%; }
 	.archive .event-name { width: 30%; }
-	.archive .col-desc { width: 50%; }
 
 }
 @media (max-width: 699px) {
@@ -556,7 +555,8 @@ footer{
 
 	.archive .details { width: 60%; }
 	.archive .details .col { width: 50%; }
-	.archive .event-name { width: 30%; }	
+	.archive .details .desc { width: 50%; }
+	.archive .event-name { width: 40%; }	
 
 }
 
