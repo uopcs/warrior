@@ -34,8 +34,7 @@
 body{
 	background-color: #6DA46D;
 	background-image: url('../img/circuit.svg');
-	background-size: 25%;
-
+	
 	font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -272,19 +271,8 @@ main .archive{
 
 	main .archive .meeting{
 		padding: 1em 0;
-	}
 
-	main .archive .meeting:nth-child(1){		
-		border-top: 5px dashed rgb(41, 41, 41);
-	}
-
-	main .archive .meeting:nth-child(odd){
-		border-bottom: 5px dashed rgb(41, 41, 41);
-		background: rgb(49, 51, 50);
-	}
-	main .archive .meeting:nth-child(even){
-		border-bottom: 5px dashed rgb(49, 51, 50);
-		background: rgb(41, 41, 41);
+		background: rgb(41, 41, 41);		
 	}
 
 	main .archive .event-name{
@@ -387,11 +375,13 @@ main .socials-section{
 }
 
 .social-button:active{
-	-webkit-transform: translateY(8px);
-	transform: translateY(8px);
+	-webkit-transform: translateY(7px);
+	transform: translateY(7px);
 
 	height: 97px;
 	box-shadow: inset 0 -3px 0 rgba(25,25,25,.25);
+
+	background-position: 0 0%;
 }
 
 .social .join-us{
