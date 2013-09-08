@@ -562,6 +562,10 @@ footer{
 
 @media (max-width: 500px) {
 
+	main{
+		width: 100%;
+	}
+
 	.previous .meetings:nth-child(2) { display: none; }
 	
 	.previous p{ display: none; }
