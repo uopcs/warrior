@@ -586,7 +586,7 @@ footer {
 
 /* Media queries */
 
-@media (min-width: 700px) and (max-width: 900px) {
+@media (max-width: 900px) {
 	header {
 		font-size: 1.25em;
 	}
@@ -620,7 +620,7 @@ footer {
 	}
 }
 
-@media (max-width: 699px) {
+@media (max-width: 700px) {
 	header {
 		font-size: 1em;
 	}
