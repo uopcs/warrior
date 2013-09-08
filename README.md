@@ -17,3 +17,12 @@ Images for the Facebook events, twitter and more
 mainsite
 --------
 What is says on the tin
+
+using:
+
+prefixfree
+leaflet
+opensourcemaps german map tiles
+https://github.com/brunob/leaflet.fullscreen
+raphael
+jquery
