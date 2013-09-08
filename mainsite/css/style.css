@@ -182,12 +182,18 @@ main .event .content{
 		color: #3D3D3D;
 	}
 
-	.leaflet-control-attribution{ display: none; }
+	.leaflet-container .leaflet-control-attribution{
+		display: none;
+		box-shadow: none;
+		background-color: rgba(41,41,41,.75);
+		color: #F5F5F5;
+	}
+
 	#map:hover .leaflet-control-attribution{ display: block; }
 
 	.leaflet-control-attribution a,
 	.leaflet-popup-content a{
-		color: #131313;
+		color: #F5F5F5;
 		text-decoration: none;
 	}
 
@@ -195,6 +201,10 @@ main .event .content{
 		background-color: rgba(255, 255, 255, 0.8);
 		border-top: 1px solid #AAA;
 		background-image: url(../img/icon-fullscreen.png);
+	}
+
+	.leaflet-control-zoom a:hover{
+		background-color: #FFF;
 	}
 
 	.leaflet-container:-webkit-full-screen { width: 100% !important; height: 100% !important; }
