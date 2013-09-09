@@ -1,6 +1,6 @@
 (function(){
 	$('.info-what').hide();
-	$('.archive').hide();
+	$('.archive').hide();	
 
 	$('.more-info-what').click(function(e){
 		$('.info-what').slideToggle(100);
@@ -25,13 +25,15 @@
 		e.preventDefault();
 	});
 
-})();
+	checkHash();
 
-$(document).ready(function(){ checkHash(); });
+})();
 
 function checkHash() {
 	var hash = window.location.hash.substring(1).toLowerCase();
-	$('[href="#' + hash + '"]').trigger('click');
+	if ( hash ) {
+		$('[href="#' + hash + '"]').trigger('click');
+	}
 }
 
 function scrollPage(clicked){
