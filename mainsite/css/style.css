@@ -721,3 +721,12 @@ footer {
 		padding: 1em;
 	}
 }
+/*Nice fugly safari hack*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    ::i-block-chrome,
+    .title span,
+    .previous,
+    .more-info {
+    	-webkit-font-smoothing: none;
+    }
+}
