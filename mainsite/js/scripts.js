@@ -1,6 +1,6 @@
 (function(){
 	$('.info-what').hide();
-	$('.archive').hide();
+	$('.archive').hide();	
 
 	$('.more-info-what').click(function(e){
 		$('.info-what').slideToggle(100);
@@ -25,16 +25,25 @@
 		e.preventDefault();
 	});
 
+	checkHash();
+
 })();
+
+function checkHash() {
+	var hash = window.location.hash.substring(1).toLowerCase();
+	if ( hash ) {
+		$('[href="#' + hash + '"]').trigger('click');
+	}
+}
 
 function scrollPage(clicked){
 	var animationSpeed = 500;					 // Speed of the animation in ms
 	var url = window.location.protocol + "//" + window.location.host + window.location.pathname; // Get current URL
 	var id = String(clicked).substr(url.length); // Take the URL and leave the # part
 	var scrollAmount = $(id).position().top;	// Finds the position from the top of the window for the heading with the ID 'hrefValue'
-	$('html, body').animate({scrollTop: scrollAmount}, animationSpeed); // Moves to the top of the post in 'animationSpeed'ms
-	parent.location.hash = id;
-	event.preventDefault(); // Stops the link's normal behaviour
+	$('html, body').animate({scrollTop: scrollAmount}, animationSpeed, function(){
+		parent.location.hash = id; //Set hash id in URL
+	}); // Moves to the top of the post in 'animationSpeed'ms
 }
 
 // Map
