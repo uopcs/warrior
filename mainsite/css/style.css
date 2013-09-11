@@ -57,7 +57,7 @@ header {
 
 header .logo{
 	display: block;
-	padding: .5em 0;
+	padding: .75em 0;
 	width: 70%;
 	margin: 0 auto;
 	background: url('../img/logo.png') center no-repeat;
@@ -555,6 +555,12 @@ footer {
 }
 
 /* Media queries */
+
+@media (min-width: 1400px) {
+	
+	header .logo{ background-size: 50%; }
+
+}
 
 @media (max-width: 900px) {
 
