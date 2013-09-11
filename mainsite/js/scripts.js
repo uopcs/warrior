@@ -8,7 +8,7 @@
 	});
 
 	$('.more-info-map').click(function(e){
-		$('.map-row').slideToggle(100);
+		$('.info-map').slideToggle(100);
 		map.invalidateSize();
 		marker.openPopup();
 		e.preventDefault();

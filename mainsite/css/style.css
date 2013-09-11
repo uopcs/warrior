@@ -129,13 +129,13 @@ main {
 	border: none;
 }
 
-.content .map-row {
+.content .info-map {
 	display: none;
 	position: relative;
 	padding: 0;
 }
 
-.content .map-row #map {
+.content .info-map #map {
 	height: 350px;
 }
 
@@ -193,10 +193,6 @@ main {
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	-webkit-transition: opacity .25s;
 	transition: opacity .25s;
-}
-
-#map:hover .leaflet-control-attribution {
-	opacity: 1;
 }
 
 .leaflet-control-attribution a {
@@ -558,6 +554,7 @@ footer {
 /* Media queries */
 
 @media (max-width: 900px) {
+
 	.top,
 	.content .q,
 	.content .a,
@@ -588,10 +585,10 @@ footer {
 }
 
 @media (max-width: 700px) {
-	.text-section p{
-		width: 100%;
-		font-size: 1em;
-	}
+
+	header .logo{ background-size: 80%; }
+
+	.text-section p{ font-size: 1em; }
 
 	.top,
 	.content .q,
@@ -641,6 +638,22 @@ footer {
 		width: 100%;
 	}
 
+	.text-section p{ font-size: .8em; }
+
+	.leaflet-container .leaflet-control-zoom,
+	.leaflet-control-attribution {
+		opacity: 1;
+	}
+
+	.more-info{ font-size: .7em; }
+
+	.top,
+	.content .q,
+	.content .a,
+	.social {
+		font-size: .5em;
+	}
+
 	.previous .meetings:nth-child(2) {
 		display: none;
 	}
@@ -669,6 +682,7 @@ footer {
 
 	.archive .event-name {
 		padding-bottom: .5em;
+		border-right: none;
 		border-bottom: 2px solid rgba(255,255,255,.05);
 		text-align: center;
 		margin-bottom: 1em;
