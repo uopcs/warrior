@@ -27,6 +27,12 @@
 
 	checkHash();
 
+	//Remove SVG if it isnt supported
+	if (!document.createElementNS &&
+        !document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect) {
+		$('.logo').removeClass('logo-svg');
+	}
+
 })();
 
 function checkHash() {

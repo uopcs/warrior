@@ -60,15 +60,16 @@ header .logo{
 	padding: .5em 0;
 	width: 70%;
 	margin: 0 auto;
-	background: url('../img/logo.png') center no-repeat;
+	background: center no-repeat;
+	background-image: url('../img/logo.png');
 	background-size: 70%;
 }
 
+header .logo-svg { background-image: url('../img/logo.svg'); }
+
 header .logo h1{ text-indent: -2345px; }
 
-header .logo:hover {
-	opacity: .8;
-}
+header .logo:hover { opacity: .8; }
 
 main {
 	width: 70%;
