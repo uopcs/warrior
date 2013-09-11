@@ -537,11 +537,13 @@ main {
 	background-image: url('../img/facebook.png');
 	background-color: #3B5998;
 }
+.social .facebook-svg { background-image: url('../img/facebook.svg'); }
 
 .social .twitter {
 	background-image: url('../img/twitter.png');
 	background-color: #4099FF;
 }
+.social .twitter-svg { background-image: url('../img/twitter.svg'); }
 
 /*
 	footer
