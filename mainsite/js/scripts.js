@@ -27,9 +27,10 @@
 
 	checkHash();
 
+	var svg_support = (!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect);
+
 	//Remove SVG if it isnt supported
-	if (!document.createElementNS &&
-        !document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect) {
+	if (!svg_support) {		
 		$('.logo').removeClass('logo-svg');
 		$('.twitter').removeClass('twitter-svg');
 		$('.facebook').removeClass('facebook-svg');
