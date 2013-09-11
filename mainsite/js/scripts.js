@@ -54,9 +54,8 @@ var ravelinPark = new L.LatLng(50.792454, -1.097009);
 var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
 
 L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
-}).addTo(map);
+	attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/">&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>' })
+    	   .addTo(map);
 
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
