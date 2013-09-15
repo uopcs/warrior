@@ -178,7 +178,8 @@ main {
 	transition: opacity .25s;
 }
 
-.leaflet-container:hover .leaflet-control-zoom {
+.leaflet-container:hover .leaflet-control-zoom,
+.leaflet-container:hover .leaflet-control-attribution {
 	opacity: 1;
 }
 
