@@ -5,36 +5,38 @@ main(){
 
 	drawTitle
 
-	echo "> What do you want to do?"
-	echo "[1] Get sent some more info by email."
-	echo "[2] Loop a word (excellent fun A++)."
-	echo ""
+	signUp
 
-	valid=0
+	# echo "> What do you want to do?"
+	# echo "[1] Get sent some more info by email."
+	# echo "[2] Loop a word (excellent fun A++)."
+	# echo ""
 
-	while [ $valid -eq 0 ];	do
+	# valid=0
 
-		read input
+	# while [ $valid -eq 0 ];	do
 
-		if [ ${#input} -lt 1 ]; then
-			valid=0
-			echo "# Enter a number!"
-		elif [ "$input" -eq "1" ]; then
-			valid=1
-			signUp
-		elif [ "$input" -eq "2" ]; then
-			valid=1
-			echo "> Which word do you want to loop?"
-			echo ""
-			read word
-			loopWord $word
-		elif [ "$input" -eq "13" ]; then
-			main
-		else
-			valid=0
-		fi
+	# 	read input
 
-	done
+	# 	if [ ${#input} -lt 1 ]; then
+	# 		valid=0
+	# 		echo "# Enter a number!"
+	# 	elif [ "$input" -eq "1" ]; then
+	# 		valid=1
+	# 		signUp
+	# 	elif [ "$input" -eq "2" ]; then
+	# 		valid=1
+	# 		echo "> Which word do you want to loop?"
+	# 		echo ""
+	# 		read word
+	# 		loopWord $word
+	# 	elif [ "$input" -eq "13" ]; then
+	# 		main
+	# 	else
+	# 		valid=0
+	# 	fi
+
+	# done
 
 }
 
@@ -57,7 +59,6 @@ signUp(){
 	valid=0
 
 	while [ $valid -eq 0 ];	do
-
 		echo "> So, what's your name?"
 		read name
 
@@ -92,7 +93,7 @@ signUp(){
 	echo "> Alright, $name. We'll send you a mail with some info to '$email'!"
 	echo "$name -- $email" >> computing-stall-output.txt 
 	sleep 2
-	echo "> Go back? [Press any key]"
+	echo "> Go back? [Press Enter]"
 	read a
 	main
 
