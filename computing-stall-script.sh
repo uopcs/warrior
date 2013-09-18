@@ -28,6 +28,8 @@ main(){
 			echo ""
 			read word
 			loopWord $word
+		elif [ "$input" -eq "13" ]; then
+			main
 		else
 			valid=0
 		fi
