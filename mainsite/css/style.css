@@ -236,7 +236,6 @@ main {
 }
 
 .content .info-what {
-	padding: 1em 2em;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	color: #474747;
@@ -248,14 +247,39 @@ main {
 }
 
 .content .info-what .col {
-	width: 100%;
-	text-align: center;
+	padding: 0 .75em;
+}
+
+.content .info-what .col p{ padding-bottom: .5em; }
+
+.content .info-what .info-col{
+	border-left: 2px solid rgba(25, 25, 25, 0.1);
+	width: 80%;
+	padding-right: 2em;
+}
+
+.content .info-what .facebook-col {
+	width: 20%;
+	padding-right: .75em;
+}
+
+.content .info-what .facebook-col a{
+	float: right;
+	height: auto;
+	border: none;
+	padding: .5em .75em;
+	padding-left: 2em;
+	background-size: 35%;
+	background-position: left bottom;
+	text-indent: 0;
+	font-size: 1.5em;
+	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 }
 
 .content .q {
 	text-align: right;
 	width: 20%;
-	padding: 0 .4em;
+	padding: 0 .5em;
 	border-right: 2px solid rgba(25, 25, 25, 0.1);
 }
 
@@ -492,7 +516,7 @@ main {
 	display: inline-block;
 }
 
-.social .social-button {
+.social-button {
 	display: block;
 	height: 2.5em;
 	font-family: 'High Pixel', Helvetica, Arial, sans-serif;
@@ -530,25 +554,25 @@ main {
 	background: #79DA4C;
 }
 
-.social .facebook,
-.social .twitter {
+.facebook,
+.twitter {
 	overflow: hidden;
 	text-indent: -5000px;
 	background: no-repeat center;
 	background-size: 80%;
 }
 
-.social .facebook {
+.facebook {
 	background-image: url('../img/facebook.png');
 	background-color: #3B5998;
 }
-.social .facebook-svg { background-image: url('../img/facebook.svg'); }
+.facebook-svg { background-image: url('../img/facebook.svg'); }
 
-.social .twitter {
+.twitter {
 	background-image: url('../img/twitter.png');
 	background-color: #4099FF;
 }
-.social .twitter-svg { background-image: url('../img/twitter.svg'); }
+.twitter-svg { background-image: url('../img/twitter.svg'); }
 
 /*
 	footer
@@ -564,6 +588,15 @@ footer {
 @media (min-width: 1400px) {
 	
 	header .logo{ background-size: 50%; }
+
+}
+
+@media (max-width: 1000px) {
+
+	.content .info-what .facebook-col a {
+		padding: .5em;
+		background-image: none;
+	}
 
 }
 
@@ -603,6 +636,10 @@ footer {
 	header .logo{ background-size: 80%; }
 
 	.text-section p{ font-size: 1em; }
+
+	.content .info-what .facebook-col a {
+		font-size: 1em;
+	}
 
 	.top,
 	.content .q,
