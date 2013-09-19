@@ -59,8 +59,9 @@ function scrollPage(clicked){
 
 var portlandBuilding = new L.LatLng(50.798612, -1.099304);
 var ravelinPark = new L.LatLng(50.792454, -1.097009);
+var union = new L.LatLng(50.794265,-1.0967600);
 
-var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
+var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 18);
 
 L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 	attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/">&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>' })
@@ -77,9 +78,9 @@ var customMarker = L.icon({
 	popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
 });
 
-map.panTo(ravelinPark);
-var marker = L.marker(ravelinPark, {icon: customMarker }).addTo(map)
-		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=50.792549,-1.097241&hl=en&sll=50.793119,-1.094513&sspn=0.007853,0.021136&t=h&mra=ls&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
+map.panTo(union);
+var marker = L.marker(union, {icon: customMarker }).addTo(map)
+		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+Union+-+Waterhole+Bar,+Student+Centre,+Cambridge+Road,+Portsmouth,+Hampshire+PO1+2EF&sll=50.797445,-1.082368&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
 
 // Background drawing
 
