@@ -101,7 +101,7 @@ signUp(){
 
 loading(){
 
-	echo "Write funny loading shit."
+	echo "TODO: Write funny loading shit."
 	clear
 
 }
@@ -118,6 +118,8 @@ drawTitle(){
 	echo "  \_____\____/|_|  |_|_|     \____/   |_|  |_____|_| \_|\_____|"; sleep 0.05                                                             
 	echo "                                                               "; sleep 0.05
 	echo "                                                        SOCIETY"; sleep 0.05
+	echo "                                                               "; sleep 0.05        
+	echo "  Wanna sign-up? :¬D                                           "; sleep 0.05        
 	echo "                                                               "; sleep 0.05        
 
 }
