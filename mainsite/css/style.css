@@ -131,6 +131,10 @@ main {
 	border: none;
 }
 
+.details .facebook{
+	float: right;
+}
+
 .content .info-map {
 	display: none;
 	position: relative;
@@ -258,6 +262,10 @@ main {
 	padding-right: 2em;
 }
 
+.content .info-what .info-col .event-image{
+	margin-left: .75em; float:right;
+}
+
 .content .info-what .facebook-col {
 	width: 20%;
 	padding-right: .75em;
@@ -271,7 +279,6 @@ main {
 	padding-left: 2em;
 	background-size: 35%;
 	background-position: left bottom;
-	text-indent: 0;
 	font-size: 1.5em;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 }
@@ -554,10 +561,14 @@ main {
 	background: #79DA4C;
 }
 
+.social .facebook,
+.social .twitter{
+	text-indent: -5000px;
+}
+
 .facebook,
 .twitter {
 	overflow: hidden;
-	text-indent: -5000px;
 	background: no-repeat center;
 	background-size: 80%;
 }
