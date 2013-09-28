@@ -142,7 +142,8 @@ main {
 }
 
 .content .info-map #map {
-	height: 350px;
+	height: 350px; /* fallback */
+	height: 75vh;
 }
 
 /* leaflet map overides */
@@ -301,6 +302,7 @@ main {
 }
 
 .more-info {
+	margin-left: 1em;
 	padding: 0 5px;
 	text-transform: uppercase;
 	font-family: 'High Pixel', Helvetica, Arial, sans-serif;
@@ -659,6 +661,10 @@ footer {
 		font-size: .6em;
 	}
 
+	.content .info-what .info-col .event-image {
+		width: 75px;
+	}
+
 	.previous .meetings {
 		display: none;
 	}
@@ -713,7 +719,11 @@ footer {
 	.content .q,
 	.content .a,
 	.social {
-		font-size: .5em;
+		font-size: .45em;
+	}
+
+	.content .info-what .facebook-col a {
+		font-size: .8em;
 	}
 
 	.previous .meetings:nth-child(2) {
