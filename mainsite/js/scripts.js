@@ -20,7 +20,9 @@
 			$('.archive').slideDown(250);
 			scrollPage(this);
 		} else {			
-			$('.archive').slideToggle(250);
+			$('.archive').slideToggle(250,function(){
+				history.pushState('', document.title, window.location.pathname); // remove the hash
+			});
 		}
 		e.preventDefault();
 	});
