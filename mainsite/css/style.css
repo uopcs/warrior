@@ -551,26 +551,26 @@ main {
 	-webkit-transform: translateY(10px);
 	-ms-transform: translateY(10px);
 	transform: translateY(10px);
-	background-position: 0 0%;
 }
 
 .social .join-us {
 	padding: 0 0 0 2em;
-	width: 70%;
+	width: 55%;
+}
+
+.social .social-button{
+	text-indent: -5000px;
 }
 
 .social .join-us .social-button {
+	text-indent: 0;
 	background: #79DA4C;
 	color: #2A5218;
 }
 
-.social .facebook,
-.social .twitter{
-	text-indent: -5000px;
-}
-
 .facebook,
-.twitter {
+.twitter,
+.github {
 	overflow: hidden;
 	background: no-repeat center;
 	background-size: 80%;
@@ -587,6 +587,12 @@ main {
 	background-color: #4099FF;
 }
 .twitter-svg { background-image: url('../img/twitter.svg'); }
+
+.github {
+	background-image: url('../img/github.png');
+	background-color: #333;
+}
+.github-svg { background-image: url('../img/github.svg'); }
 
 /*
 	footer
