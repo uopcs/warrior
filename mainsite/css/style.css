@@ -653,7 +653,10 @@ footer {
 
 @media (max-width: 700px) {
 
-	header .logo{ background-size: 80%; }
+	header .logo{
+		background-size: 80%;
+		padding: .25em 0;
+	}
 
 	.text-section p{ font-size: 1em; }
 
@@ -707,6 +710,8 @@ footer {
 	#background-images {
 		display: none;
 	}
+
+	header .logo{ padding: 0; }
 	
 	header .logo,
 	main {
