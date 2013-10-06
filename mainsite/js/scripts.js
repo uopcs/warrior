@@ -62,6 +62,7 @@ function scrollPage(clicked){
 var portlandBuilding = new L.LatLng(50.798612, -1.099304);
 var ravelinPark = new L.LatLng(50.792454, -1.097009);
 var union = new L.LatLng(50.794265,-1.0967600);
+var brewhouseKitchen = new L.LatLng(50.7962552, -1.093365);
 
 var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
 
@@ -80,9 +81,9 @@ var customMarker = L.icon({
 	popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
 });
 
-map.panTo(union);
-var marker = L.marker(union, {icon: customMarker }).addTo(map)
-		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+Union+-+Waterhole+Bar,+Student+Centre,+Cambridge+Road,+Portsmouth,+Hampshire+PO1+2EF&sll=50.797445,-1.082368&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
+map.panTo(brewhouseKitchen);
+var marker = L.marker(brewhouseKitchen, {icon: customMarker }).addTo(map)
+		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+White+Swan%2C+26+Guildhall+Walk%2C+Portsmouth%2C+Hampshire+PO1+2DD&sll=50.7962552,-1.093365&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
 
 // Background drawing
 
