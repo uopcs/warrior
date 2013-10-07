@@ -810,6 +810,8 @@ footer {
 		font-size: .8em;
 	}
 
+	.content .a .note{ display: none; }
+
 	.previous .meetings:nth-child(2) {
 		display: none;
 	}
