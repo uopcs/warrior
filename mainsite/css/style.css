@@ -184,8 +184,8 @@ main {
 }
 
 .content .info-map #map {
-	height: 350px; /* fallback */
-	height: 75vh;
+	height: 250px; /* fallback */
+	height: 45vh;
 }
 
 /* leaflet map overides */
@@ -734,6 +734,10 @@ footer {
 
 	.content .info-what .links-col a {
 		font-size: 1em;
+	}
+
+	.links-col a#brewhouse {
+		width: 100%;
 	}
 
 	.top,
