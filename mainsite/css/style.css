@@ -118,8 +118,17 @@ main {
 	background-color: #f5f5f5;
 }
 
-.content ol, .content ul{ list-style-position: inside; padding-bottom: .5em; }
-.content ul li{ list-style-type: square; }
+.content ol, .content ul{
+	list-style-position: inside;
+	padding-bottom: .5em;
+}
+
+.content ul li{ list-style: inside square; }
+
+.talks{ padding-top: .5em; }
+
+.talks .links li{ margin-left: 1em; }
+.talks .links li a:hover{ border-color: #C24545; }
 
 .content .row {
 	overflow: hidden;
