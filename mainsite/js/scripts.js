@@ -5,10 +5,12 @@
 
 	$('.meeting').find('.event-name').click(function(e){
 		$(this).parents('.meeting').find('.details').slideToggle(100);
+		$(this).parents('.meeting').find('.show-desc').text(swapMoreLess($(this).parents('.meeting').find('.show-desc').text()));
 		e.preventDefault();
 	});
 
 	$('.more-info-what').click(function(e){
+		$('.more-info-what').text(swapMoreLess($('.more-info-what').text()));
 		$('.info-what').slideToggle(100);
 		e.preventDefault();
 	});
@@ -16,15 +18,17 @@
 	$('.more-info-map').click(function(e){
 		$('.info-map').slideToggle(100);
 		map.invalidateSize();
-		marker.openPopup();
+		openPopups(markers);
 		e.preventDefault();
 	});
 
 	$('.previous').find('.meetings,.more').click(function(e){
 
-		if($(this).is('.meetings')){			
+		if($(this).is('.meetings')){		
 			$('.archive').slideDown(250);
 			$(this.hash).find('.details').slideDown(100);
+			console.log('wow');
+			$(this.hash).find('.show-desc').text(swapMoreLess($(this.hash).find('.show-desc').text()));
 			scrollPage(this);
 		} else {
 			$('.archive').slideToggle(250,function(){
@@ -48,6 +52,13 @@
 
 })();
 
+function swapMoreLess(text){
+	if(text.toLowerCase() == 'more'){
+		return 'Less';
+	}
+	return 'More';
+}
+
 function checkHash() {
 	var hash = window.location.hash.substring(1).toLowerCase();
 	if ( hash ) {
@@ -67,12 +78,28 @@ function scrollPage(clicked){
 
 // Map
 
+function openPopups(markers){
+	for(var i = 0; i < markers.length; i++){
+		markers[i].openPopup();
+	}
+}
+
 var portlandBuilding = new L.LatLng(50.798612, -1.099304);
 var ravelinPark = new L.LatLng(50.792454, -1.097009);
-var union = new L.LatLng(50.794265,-1.0967600);
-var brewhouseKitchen = new L.LatLng(50.7962552, -1.093365);
 
-var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, 16);
+var union = new L.LatLng(50.794265, -1.0967600);
+
+var brewhouseKitchen = new L.LatLng(50.7962552, -1.093365);
+var honestPoli = new L.LatLng(50.790383, -1.088686);
+var theDeco = new L.LatLng(50.789357, -1.084105);
+var oneEyedDog = new L.LatLng(50.789368, -1.082842);
+var fatFox = new L.LatLng(50.788678, -1.08248); 
+var lJR = new L.LatLng(50.7875878, -1.082029); 
+var wineVaults = new L.LatLng(50.787384, -1.081109);
+
+var mapZoom = 14;
+
+var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, mapZoom);
 
 L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 	attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/">&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>' })
@@ -81,17 +108,41 @@ L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
 
-var customMarker = L.icon({
-	iconUrl: './img/map-marker.png',
+map.panTo(honestPoli);
 
-	iconSize:     [24, 38], // size of the icon
-	iconAnchor:   [12, 38], // where the 'tip' is
-	popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
-});
+var places = [
+	{ name: 'The Union', latLng: union },
+	{ name: 'The Honest Politician', latLng: honestPoli },
+	{ name: 'The Deco', latLng: theDeco },
+	{ name: 'The One-Eyed Dog', latLng: oneEyedDog },
+	{ name: 'The Fat Fox', latLng: fatFox },
+	{ name: 'Little Johnny Russells', latLng: lJR },
+	{ name: 'The Wine Vaults', latLng: wineVaults }
+];
 
-map.panTo(union);
-var marker = L.marker(union, {icon: customMarker }).addTo(map)
-		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+Union+-+Waterhole+Bar%2C+Student+Centre%2C+Cambridge+Road%2C+Portsmouth%2C+Hampshire+PO1+2EF%2C+United+Kingdom&sll=50.7962552,-1.093365&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
+var markers = [];
+
+for(var i = 0; i < places.length; i++){
+	var place = places[i];
+
+	var prettyNo = (i + 1) + ". ";
+
+	var url = "https://maps.google.co.uk/maps?daddr="+ place.name +"&sll="+ place.latLng.lat +","+ place.latLng.lng +"&z="+ mapZoom;
+
+	var markerIcon = L.icon({
+		iconUrl: "./img/map-markers/"+ (i+1) +".png",
+
+		iconSize:     [24, 38], // size of the icon
+		iconAnchor:   [12, 38], // where the 'tip' is
+		popupAnchor:  [0, -20], // point from which the popup should open relative to the iconAnchor
+
+		
+	});
+
+	var marker = L.marker(place.latLng, {icon: markerIcon }).addTo(map)
+     	      .bindPopup("<a class='direct' href='"+ url +"' target='_blank' title='Get directions here&hellip;'>"+ prettyNo + place.name +"</a>");
+}
+
 
 // Background drawing
 
