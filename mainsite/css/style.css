@@ -529,7 +529,7 @@ main {
 .archive .event-name time{
 	padding: 0 1em;
 	text-align: right;
-	color: #75A86E;
+	color: #79A6CF;
 	text-transform: uppercase;
 	width: 20%;
 	font-size: .75em;
@@ -605,7 +605,7 @@ main {
 }
 
 .archive .details .desc .talk-speaker {
-	color: #74B18C;
+	color: #CF7979;
 	border: none;
 }
 
