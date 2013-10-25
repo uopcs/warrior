@@ -541,6 +541,8 @@ main {
 	font-size: 1em;
 	padding: 0 1em;	
 	border-left: 2px solid #303030;
+	-webkit-transition: opacity .1s;
+			transition: opacity .1s;
 }
 
 .archive .event-name h2 {
@@ -563,7 +565,9 @@ main {
 			transition: opacity .1s;
 }
 
-.archive .event-name:hover{ cursor: pointer; }
+.archive .event-name:hover{cursor: pointer; }
+
+.archive .event-name:hover h1{ opacity: .8 }
 
 .archive .event-name:hover .show-desc { opacity: .8; }
 
