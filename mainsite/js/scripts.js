@@ -94,8 +94,7 @@ var honestPoli = new L.LatLng(50.790383, -1.088686);
 var theDeco = new L.LatLng(50.789357, -1.084105);
 var oneEyedDog = new L.LatLng(50.789368, -1.082842);
 var fatFox = new L.LatLng(50.788678, -1.08248); 
-var lJR = new L.LatLng(50.7875878, -1.082029); 
-var wineVaults = new L.LatLng(50.787384, -1.081109);
+var lJR = new L.LatLng(50.7875878, -1.082029);
 
 var mapZoom = 14;
 
@@ -116,8 +115,7 @@ var places = [
 	{ name: 'The Deco', latLng: theDeco },
 	{ name: 'The One-Eyed Dog', latLng: oneEyedDog },
 	{ name: 'The Fat Fox', latLng: fatFox },
-	{ name: 'Little Johnny Russells', latLng: lJR },
-	{ name: 'The Wine Vaults', latLng: wineVaults }
+	{ name: 'Little Johnny Russells', latLng: lJR }
 ];
 
 var markers = [];
