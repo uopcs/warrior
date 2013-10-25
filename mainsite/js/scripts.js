@@ -26,8 +26,9 @@
 			$('.archive').slideDown(250);
 			$(this.hash).find('.details').slideDown(100);
 			scrollPage(this);
-		} else {			
+		} else {
 			$('.archive').slideToggle(250,function(){
+				$('.details').hide();
 				history.pushState('', document.title, window.location.pathname); // remove the hash
 			});
 		}
