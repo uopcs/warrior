@@ -1,6 +1,12 @@
 (function(){
 	$('.info-what').hide();
-	$('.archive').hide();	
+	$('.archive').hide();
+	$('.meeting').find('.details').hide();
+
+	$('.meeting').click(function(e){
+		$(this).find('.details').slideToggle(100);
+		e.preventDefault();
+	});
 
 	$('.more-info-what').click(function(e){
 		$('.info-what').slideToggle(100);
@@ -18,6 +24,7 @@
 
 		if($(this).is('.meetings')){			
 			$('.archive').slideDown(250);
+			$(this.hash).find('.details').slideDown(100);
 			scrollPage(this);
 		} else {			
 			$('.archive').slideToggle(250,function(){
@@ -81,9 +88,9 @@ var customMarker = L.icon({
 	popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
 });
 
-map.panTo(brewhouseKitchen);
-var marker = L.marker(brewhouseKitchen, {icon: customMarker }).addTo(map)
-		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+White+Swan%2C+26+Guildhall+Walk%2C+Portsmouth%2C+Hampshire+PO1+2DD&sll=50.7962552,-1.093365&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
+map.panTo(union);
+var marker = L.marker(union, {icon: customMarker }).addTo(map)
+		             .bindPopup("<a class='direct' href='https://maps.google.co.uk/maps?daddr=The+Union+-+Waterhole+Bar%2C+Student+Centre%2C+Cambridge+Road%2C+Portsmouth%2C+Hampshire+PO1+2EF%2C+United+Kingdom&sll=50.7962552,-1.093365&z=16' title='with Google Maps' target='_blank'>Get directions here!</a>");
 
 // Background drawing
 

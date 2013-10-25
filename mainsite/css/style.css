@@ -153,6 +153,7 @@ main {
 .content .info-what a:hover{	
 	border-bottom: 2px solid #5A8F53;
 	-webkit-transition: border-color .1s;
+			transition: border-color .1s;
 }
 
 .talks li{
@@ -180,6 +181,7 @@ main {
 	text-decoration: none;
 	border-bottom: 2px solid #5A8F53;
 	-webkit-transition: border-color .1s;
+			transition: border-color .1s;
 }
 
 .talks a.talk-speaker:hover{
@@ -232,7 +234,7 @@ main {
 	border: 2px solid rgba(0, 0, 0, 0.25);
 	opacity: 0;
 	-webkit-transition: opacity .25s;
-	transition: opacity .25s;
+			transition: opacity .25s;
 }
 
 .leaflet-container:hover .leaflet-control-zoom,
@@ -251,7 +253,7 @@ main {
 	color: #F5F5F5;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	-webkit-transition: opacity .25s;
-	transition: opacity .25s;
+			transition: opacity .25s;
 }
 
 .leaflet-control-attribution a {
@@ -384,7 +386,7 @@ main {
 	text-decoration: none;
 	border-bottom: 3px solid #CFC679;
 	-webkit-transition: border-color .1s;
-	transition: border-color .1s;
+			transition: border-color .1s;
 }
 
 .more-info:hover {
@@ -421,7 +423,7 @@ main {
 	display: block;
 	text-align: right;
 	-webkit-transition: background .1s;
-	transition: background .1s;
+			transition: background .1s;
 }
 
 		.previous p.more a{
@@ -430,7 +432,8 @@ main {
 			color: #F5F5F5;
 			text-decoration: none;
 			border-bottom: 2px solid #8A8585;
-			transition: border-color .1s;
+			-webkit-transition: border-color .1s;
+					transition: border-color .1s;
 		}
 
 		.previous p.more:hover a{
@@ -445,7 +448,8 @@ main {
 		text-decoration: none;
 		border-right: 2px solid rgba(255,255,255,.05);
 		font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-		transition: background .1s;
+		-webkit-transition: background .1s;
+				transition: background .1s;
 
 	}
 
@@ -460,7 +464,7 @@ main {
 	border-right: 2px solid rgba(255,255,255,.05);
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	-webkit-transition: background .1s;
-	transition: background .1s;
+			transition: background .1s;
 }
 
 .previous p.more:hover,
@@ -505,69 +509,136 @@ main {
 	border-bottom: 5px dashed #292929;
 }
 
+.archive .event-name,
+.archive .details {
+	overflow: hidden;
+}
+
 .archive .event-name {
-	padding: 0 10px;
-	text-align: right;
-	width: 20%;
-	float: left;
+	padding: .5em 0;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-	border-right: 2px solid rgba(255, 255, 255, 0.05);
+	text-align: left;
+}
+
+.archive .event-name time,
+.archive .event-name h1,
+.archive .event-name h2 {
+	float: left;
+}
+
+.archive .event-name time{
+	padding: 0 1em;
+	text-align: right;
+	color: #75A86E;
+	text-transform: uppercase;
+	width: 20%;
+	font-size: .75em;
 }
 
 .archive .event-name h1 {
+	width: 50%;
 	color: #F5F5F5;
 	font-size: 1em;
+	padding: 0 1em;	
+	border-left: 2px solid #303030;
 }
 
 .archive .event-name h2 {
-	color: rgb(175,175,175);
+	width: 20%;
+	color: #CCC163;
 	font-size: 0.7em;
 	font-weight: 500;
 }
 
-.archive .details {
-	display: inline-block;
-	width: 80%;
+.archive .event-name .show-desc {
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFF;
+	padding: 0 1em;
+	font-size: .75em;
+	text-decoration: none;
+	width: 10%;
+	float: right;
+	-webkit-transition: opacity .1s;
+			transition: opacity .1s;
 }
+
+.archive .event-name:hover{ cursor: pointer; }
+
+.archive .event-name:hover .show-desc { opacity: .8; }
 
 .archive .details .col {
 	width: 20%;
 	float: left;
-	padding: 0 .5em;
+	padding: 0 1em;
 }
+
+.archive .details .col .note{ font-size: .65em; }
+
+.archive .details .info { text-align: right; }
 
 .archive .details .desc {
-	width: 60%;
+	width: 80%;
+	border-left: 2px solid #303030;
 }
 
-.archive .details .col h2 {
-	margin-bottom: .25em;
-	font-size: 16px;
-	font-family: 'High Pixel', Helvetica, Arial, sans-serif;
-	color: #F5F5F5;
-	text-transform: uppercase;
+.archive .details .desc .event-image{
+	float: right;
+	width: 10%;
+	margin: 1em;
 }
 
-.archive .details .col:nth-child(1) h2 {
-	color: #79A6CF;
+.archive .details .info .facebook{
+	width: 65%;
+	margin: .25em 0;
+	float: right;
+	text-indent: -9999px;
+	height: 40px;
+	border: none;
 }
 
-.archive .details .col:nth-child(2) h2 {
-	color: #CF7979;
+.archive .details .info .facebook:hover{ border: none; }
+
+.archive .details .desc .talks li,
+.archive .details .desc .talk-title {
+	color: #C9C9C9;
 }
 
-.archive .details .col:nth-child(3) h2 {
-	color: #CFC679;
+.archive .details .desc .talk-speaker {
+	color: #74B18C;
+	border: none;
+}
+
+.archive .details .desc .talks .links{ margin-bottom: .5em; }
+
+.archive .details .desc .talks .links li{
+	margin-left: 3em;
+	list-style: square;
 }
 
 .archive .details .col p,
 .archive .details .col ul li {
+	padding: .2em 0;
+	line-height: 1.45;
 	font-size: 0.8em;
-	color: white;
+	color: #ADADAD;
 }
 
 .archive .details .col ul li {
 	list-style: none;
+}
+
+.archive .details .col a{
+	color: inherit;
+	text-decoration: none;
+	font-style: italic;
+	border-bottom: 1px dotted #5F5F5F;
+	-webkit-transition: border-color .1s;
+			transition: border-color .1s;
+}
+
+.archive .details .col a:hover{	
+	border-bottom: 1px solid #5A8F53;
 }
 
 .text-section {
@@ -613,10 +684,10 @@ main {
 
 .social-button:hover {
 	-webkit-transition: .1s;
-	transition: .1s;
+			transition: .1s;
 	-webkit-transform: translateY(5px);
-	-ms-transform: translateY(5px);
-	transform: translateY(5px);
+		-ms-transform: translateY(5px);
+			transform: translateY(5px);
 	box-shadow: inset 0 -5px 0 rgba(25,25,25,.25);
 }
 
@@ -723,13 +794,6 @@ footer {
 		width: 25%;
 	}
 
-	.archive .details {
-		width: 65%;
-	}
-
-	.archive .event-name {
-		width: 30%;
-	}
 }
 
 @media (max-width: 700px) {
@@ -773,21 +837,6 @@ footer {
 		width: 33%;
 	}
 
-	.archive .details {
-		width: 60%;
-	}
-
-	.archive .details .col {
-		width: 50%;
-	}
-
-	.archive .details .desc {
-		width: 50%;
-	}
-
-	.archive .event-name {
-		width: 40%;
-	}
 }
 
 @media (max-width: 500px) {
@@ -845,25 +894,4 @@ footer {
 		margin: 0 auto;
 	}
 
-	.archive .event-name,
-	.archive .details,
-	.archive .details .desc {
-		width: 100%;
-	}
-
-	.archive .event-name {
-		padding-bottom: .5em;
-		border-right: none;
-		border-bottom: 2px solid rgba(255,255,255,.05);
-		text-align: center;
-		margin-bottom: 1em;
-	}
-
-	.archive .details .desc {
-		padding: 0 .5em 1em;
-	}
-
-	.archive .meeting {
-		padding: 1em;
-	}
 }
