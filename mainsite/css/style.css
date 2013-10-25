@@ -613,7 +613,7 @@ main {
 	border: none;
 }
 
-.archive .details .desc .talks .links{ margin-bottom: .5em; }
+.archive .details .desc .talks .links{ margin-bottom: 1em; }
 
 .archive .details .desc .talks .links li{
 	margin-left: 3em;

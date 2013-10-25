@@ -3,8 +3,8 @@
 	$('.archive').hide();
 	$('.meeting').find('.details').hide();
 
-	$('.meeting').click(function(e){
-		$(this).find('.details').slideToggle(100);
+	$('.meeting').find('.event-name').click(function(e){
+		$(this).parents('.meeting').find('.details').slideToggle(100);
 		e.preventDefault();
 	});
 
