@@ -224,6 +224,10 @@ main {
 	border: none;
 }
 
+.leaflet-popup-content-wrapper {
+	text-align: center;
+}
+
 .leaflet-bar,
 .leaflet-bar-part-top,
 .leaflet-bar-part-bottom,

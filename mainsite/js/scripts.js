@@ -123,8 +123,6 @@ var markers = [];
 for(var i = 0; i < places.length; i++){
 	var place = places[i];
 
-	var prettyNo = (i + 1) + ". ";
-
 	var url = "https://maps.google.co.uk/maps?daddr="+ place.name +"&sll="+ place.latLng.lat +","+ place.latLng.lng +"&z="+ mapZoom;
 
 	var markerIcon = L.icon({
@@ -138,7 +136,7 @@ for(var i = 0; i < places.length; i++){
 	});
 
 	var marker = L.marker(place.latLng, {icon: markerIcon }).addTo(map)
-     	      .bindPopup("<a class='direct' href='"+ url +"' target='_blank' title='Get directions here&hellip;'>"+ prettyNo + place.name +"</a>");
+     	      .bindPopup("<a class='direct' href='"+ url +"' target='_blank' title='Get directions here&hellip;'>"+ place.name +"</a>");
 }
 
 
