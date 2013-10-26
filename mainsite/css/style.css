@@ -864,6 +864,14 @@ footer {
 		width: 33%;
 	}
 
+	.archive .event-name time { width: 25%; }
+	.archive .event-name h1 { width: 55%; }
+	.archive .event-name h2 { width: 20%; }
+	.archive .event-name .show-desc { display: none; }
+
+	.archive .details .col { width: 25%; }
+	.archive .details .desc { width: 75%; }
+
 }
 
 @media (max-width: 500px) {
@@ -920,5 +928,7 @@ footer {
 		text-align: center;
 		margin: 0 auto;
 	}
+
+	.archive .event-name time { font-size: .6em; }
 
 }
