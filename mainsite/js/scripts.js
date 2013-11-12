@@ -107,15 +107,10 @@ L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
 
-map.panTo(honestPoli);
+map.panTo(brewhouseKitchen);
 
 var places = [
-	{ name: 'The Union', latLng: union },
-	{ name: 'The Honest Politician', latLng: honestPoli },
-	{ name: 'The Deco', latLng: theDeco },
-	{ name: 'The One-Eyed Dog', latLng: oneEyedDog },
-	{ name: 'The Fat Fox', latLng: fatFox },
-	{ name: 'Little Johnny Russells', latLng: lJR }
+	{ name: 'The Brewhouse and Kitchen', latLng: brewhouseKitchen }
 ];
 
 var markers = [];
@@ -125,8 +120,12 @@ for(var i = 0; i < places.length; i++){
 
 	var url = "https://maps.google.co.uk/maps?daddr="+ place.name +"&sll="+ place.latLng.lat +","+ place.latLng.lng +"&z="+ mapZoom;
 
+	var iconName = "default.png";
+
+	if(places.length > 1){ iconName = (i+1) +".png"; }
+
 	var markerIcon = L.icon({
-		iconUrl: "./img/map-markers/"+ (i+1) +".png",
+		iconUrl: "./img/map-markers/"+ iconName,
 
 		iconSize:     [24, 38], // size of the icon
 		iconAnchor:   [12, 38], // where the 'tip' is

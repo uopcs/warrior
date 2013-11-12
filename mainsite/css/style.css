@@ -609,6 +609,16 @@ main {
 	border-left: 2px solid #303030;
 }
 
+.archive .details .desc h3{
+	color: #CCCBCB;
+	text-transform: uppercase;
+	padding-top: .25em;
+}
+
+.archive .details .desc .crawlroute{
+	color: #E7E7E7;
+}
+
 .archive .details .desc .event-image{
 	float: right;
 	width: 10%;
