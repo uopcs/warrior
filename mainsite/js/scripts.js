@@ -95,8 +95,9 @@ var theDeco = new L.LatLng(50.789357, -1.084105);
 var oneEyedDog = new L.LatLng(50.789368, -1.082842);
 var fatFox = new L.LatLng(50.788678, -1.08248); 
 var lJR = new L.LatLng(50.7875878, -1.082029);
+var technologyLearningCentre = new L.LatLng(50.79880000, -1.0982454);
 
-var mapZoom = 14;
+var mapZoom = 16;
 
 var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, mapZoom);
 
@@ -107,10 +108,10 @@ L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
 
-map.panTo(brewhouseKitchen);
+map.panTo(technologyLearningCentre);
 
 var places = [
-	{ name: 'The Brewhouse and Kitchen', latLng: brewhouseKitchen }
+	{ name: 'Lion Terrace, Portsmouth', latLng: technologyLearningCentre }
 ];
 
 var markers = [];

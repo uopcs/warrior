@@ -328,12 +328,32 @@ main {
 }
 
 .content .info-what .col {
+	overflow: hidden;
 	padding: 0 .75em;
 }
 
 .content .info-what .col p{
 	line-height: 1.45;
 	padding-bottom: .5em;
+}
+
+.content .info-what .col p.twilio{
+	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+	float: right;
+	margin-top: 1em;
+	width: 80%;
+	text-align: center;
+	font-size: 1.25em;
+	text-transform: uppercase;
+}
+
+.content .info-what .col p.twilio a{
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: url('../img/events/twilio.png') center no-repeat;
+	background-size: contain;
+	text-indent: -1337px;
 }
 
 .content .info-what .info-col{
@@ -343,9 +363,15 @@ main {
 }
 
 .content .info-what .info-col .event-image{
-	margin: 0 .5em;
+	margin: 0 auto;
 	float: right;
 }
+
+.content .info-what .info-col .event-image-right,
+.content .info-what .info-col .event-image-left{ margin: .5em; }
+
+.content .info-what .info-col .event-image-right{ float: right; }
+.content .info-what .info-col .event-image-left{ float: left; }
 
 .content .info-what .links-col {
 	width: 20%;
@@ -358,7 +384,8 @@ main {
 	border: none;
 }
 
-.links-col a.facebook{	
+.links-col a.social-button{	
+	margin-bottom: 10%;
 	padding: .5em .75em;
 	padding-left: 2em;
 	background-size: 35%;
@@ -368,8 +395,13 @@ main {
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 }
 
+.links-col a.eventbrite{
+	background-size: 30%;
+	background-position: left center; 
+}
+
 .links-col a#brewhouse{
-	margin: 5% auto;
+	margin: 0 auto 5%;
 	text-indent: -5432px;
 	width: 45%;
 	height: 120px;
@@ -396,7 +428,10 @@ main {
 	color: rgb(29, 29, 29);
 }
 
-.content .a .note{ font-size: .5em; }
+.content .a .note{
+	margin-left: 1em;
+	font-size: .5em;
+}
 
 .more-info {
 	margin-left: 1em;
@@ -751,11 +786,20 @@ main {
 
 .facebook,
 .twitter,
-.github {
+.github,
+.eventbrite {
 	overflow: hidden;
 	background: no-repeat center;
 	background-size: 80%;
 }
+
+.eventbrite {
+	background-image: url('../img/eventbrite.png');
+	background-color: #ff821d;
+	background-position: 5% 0;
+}
+.eventbrite-svg { background-image: url('../img/eventbrite.svg'); }
+
 
 .facebook {
 	background-image: url('../img/facebook.png');
@@ -811,6 +855,11 @@ footer {
 
 @media (max-width: 900px) {
 
+	header .logo,
+	main {
+		width: 80%;
+	}
+
 	.top,
 	.content .q,
 	.content .a,
@@ -835,6 +884,11 @@ footer {
 
 @media (max-width: 700px) {
 
+	header .logo,
+	main {
+		width: 90%;
+	}
+
 	header .logo{
 		background-size: 80%;
 		padding: .25em 0;
@@ -844,6 +898,10 @@ footer {
 
 	.content .info-what .links-col a {
 		font-size: 1em;
+	}
+
+	.content .info-what .col p.twilio{
+		width: 100%;
 	}
 
 	.links-col a#brewhouse {
