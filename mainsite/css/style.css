@@ -175,38 +175,6 @@ main {
 
 .crawlroute li span{ color: #7C755A; }
 
-.talks li{
-	list-style: none;
-	padding-bottom: .5em;
-	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
-}
-
-.talks .talk-title,
-.talks .talk-speaker{
-	color: #242424;
-}
-
-.talks .talk-title{ font-weight: 700; }
-
-.talks .talk-title::before,
-.talks .talk-title::after{ color: #474747; }
-
-.talks .talk-title::before{ content: '“'; margin-right: .15em; }
-.talks .talk-title::after{ content: '”'; margin-left: .15em; }
-
-.talks a.talk-speaker{
-	color: #242424;
-	font-style: normal;
-	text-decoration: none;
-	border-bottom: 2px solid #5A8F53;
-	-webkit-transition: border-color .1s;
-			transition: border-color .1s;
-}
-
-.talks a.talk-speaker:hover{
-	border-bottom-color: #79AC79;
-}
-
 .content .info-map {
 	display: none;
 	position: relative;
@@ -456,6 +424,42 @@ main {
 	vertical-align: super;
 }
 
+.talks li{
+	list-style: none;
+	padding-bottom: .5em;
+	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
+}
+
+.talks .talk-title{
+	color: #242424;
+	font-weight: 700;
+}
+
+.talks .talk-title::before,
+.talks .talk-title::after{ color: #474747; }
+
+.talks .talk-title::before{ content: '“'; margin-right: .15em; }
+.talks .talk-title::after{ content: '”'; margin-left: .15em; }
+
+.talks a.talk-speaker,
+.talks span.talk-speaker{
+	color: #242424;
+	font-style: normal;
+	border-bottom: 2px solid #5A8F53;
+	text-decoration: none;
+	-webkit-transition: border-color .1s;
+			transition: border-color .1s;
+}
+
+.talks a.talk-speaker:hover{
+	border-bottom-color: #79AC79;
+}
+
+
+.talks span.talk-speaker{
+	border-bottom-color: #aaa;
+}
+
 .previous {
 	color: #f5f5f5;
 	height: 3.5em;
@@ -660,7 +664,8 @@ main {
 	margin: 1em;
 }
 
-.archive .details .info .facebook{
+.archive .details .info .facebook,
+.archive .details .info .eventbrite{
 	width: 65%;
 	margin: .25em 0;
 	float: right;
@@ -669,17 +674,23 @@ main {
 	border: none;
 }
 
-.archive .details .info .facebook:hover{ border: none; }
+.archive .details .info .eventbrite{
+	background-position: 100% 50%;
+}
+
+.archive .details .info .facebook:hover,
+.archive .details .info .eventbrite:hover{ border: none; }
 
 .archive .details .desc .talks li,
 .archive .details .desc .talk-title {
 	color: #C9C9C9;
 }
 
-.archive .details .desc .talk-speaker {
+.archive .details .desc .talk-speaker{
 	color: #CF7979;
 	border: none;
 }
+.archive .details .desc .talk-speaker:hover{ border: none; }
 
 .archive .details .desc .talks .links{ margin-bottom: 1em; }
 

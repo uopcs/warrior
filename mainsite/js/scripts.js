@@ -108,10 +108,10 @@ L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 var fullScreen = new L.Control.FullScreen(); 
 map.addControl(fullScreen);
 
-map.panTo(technologyLearningCentre);
+map.panTo(brewhouseKitchen);
 
 var places = [
-	{ name: 'Lion Terrace, Portsmouth', latLng: technologyLearningCentre }
+	{ name: 'The White Swan, 26 Guildhall Walk, Portsmouth', latLng: brewhouseKitchen }
 ];
 
 var markers = [];
