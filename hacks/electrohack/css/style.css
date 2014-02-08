@@ -1,0 +1,196 @@
+*{
+	margin: 0; padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body{
+	background: #f1f1f1;
+	font-family: Oswald, Helvetica, Arial, sans-serif;
+}
+
+main{
+	width: 80%;
+	margin: 15px auto;
+	animation: fadeIn 1.5s;
+	padding: 0 1em;
+}
+
+@keyframes fadeIn{
+	0%{ opacity: 0; }
+}
+
+.poster, .details{
+	width: 50%;
+	float: left;
+}
+
+.paper{
+	padding: 2em;
+	background: whiteSmoke;
+	box-shadow: 0 0 100px rgba(0,0,0,.15);
+}
+
+.poster p{
+	font-weight: 300;
+	font-size: 1.5em;
+	padding: 0 .5em;
+	text-align: center;
+}
+
+.title{
+	width: 80%;
+	margin: 0 auto;
+	background: seagreen;
+	padding: .15em .25em;
+	color: white;
+	font-weight: 400;
+	font-size: 3em;
+	text-align: center;
+}
+
+.caption, .details{
+	color: #111;
+}
+
+.caption{
+	padding: 25px 0;
+	width: 100%;
+	min-height: 5em;
+	font-family: inherit;
+	font-size: 5em;
+	line-height: 1em;
+	letter-spacing: -0.015em;
+	animation: fadeIn-2 1s;
+	resize: vertical;
+	overflow-x: hidden;
+	border: none;
+	background: none;
+	margin: .15em 0;
+}
+
+.caption:hover{
+	opacity: .9;
+}
+
+.caption:focus{
+	opacity: .7;
+	outline: none;
+}
+
+.send{
+	margin: .25em 0;
+	padding: .5em;
+	width: 100%;
+	font: inherit;
+	font-size: 3em;
+	line-height: 1em;
+	text-transform: uppercase;
+	border: 5px solid rgba(0,0,0,.25);
+	background: rgba(0,0,0,.15);
+	color: rgba(0,0,0,.75);
+	animation: fadeIn-3 1s;
+}
+
+.send:hover{
+	cursor: pointer;
+	transform: translateY(3px);
+}
+
+.send:active{
+	transform: scale(.99);
+}
+
+.details{
+	color: #333;
+	padding-left: 3em;
+	font-size: .8em;
+}
+
+.details p{
+	text-align: center;
+	font-size: 3em;
+}
+
+.details p a{
+	font: inherit;
+	color: inherit;
+	word-break: break-word;
+}
+
+.details p a:hover{
+	opacity: .9;
+	text-decoration: none;
+}
+
+.details p.info{
+	padding: .5em 0;
+	text-align: left;
+	font-weight: 300;
+	line-height: 1.45;
+	font-size: 2em;
+}
+
+.details p.info img{
+	height: .75em;
+}
+
+.details p.info span{
+	font-weight: 400;
+}
+
+@media screen and (max-width: 1200px){
+	main{ width: 90%; }
+	.title{ font-size: 2em; }
+}
+
+@media screen and (max-width: 1000px){
+	main{ width: 100%; }
+}
+
+@media screen and (max-width: 700px){
+
+	main{
+		margin: 0;
+		padding: 1em;
+	}
+
+	.poster, .details{
+		width: 100%;
+		float: none;
+	}
+
+	.poster{
+		margin: 0;
+	}
+
+	.poster p{
+		padding: 0;
+		font-size: 1.5em;
+	}
+	
+	.title{ width: 90%; }
+
+	.caption{
+		font-size: 3em;
+	}
+
+	.send{
+		font-size: 1.75em;
+	}
+
+	.details{ padding: 0 .5em; }
+
+	.details p.info{ font-size: 2em;}
+	.details p.info img{ height: .5em; }
+	.details p{ font-size: 2em; }
+}
+
+@media screen and (max-width: 400px){
+	.title{
+		width: 95%;
+		font-size: 1.5em;
+	}
+
+}
