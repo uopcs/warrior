@@ -72,6 +72,35 @@ header .logo h1{ text-indent: -2345px; }
 
 header .logo:hover { opacity: .8; }
 
+.event-banner{
+	width: 100%;
+	background: #3D3D3D;
+	color: #FFF;
+}
+
+.event-banner a{
+	display: block;
+	padding: .75em;
+
+	font-family: 'Anonymous Pro', Helvetica, sans-serif;
+	font-weight: 800;
+	color: #FFF;
+	
+	text-align: center;
+	text-decoration: none;
+}
+
+.event-banner a::after{
+	margin-left: .25em;
+	content: '↗';
+
+	font-weight: 500;
+}
+
+.event-banner a:hover{
+	background: rgba(255,255,255,.1);
+}
+
 main {
 	width: 70%;
 	margin: 0 auto;
