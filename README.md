@@ -25,3 +25,6 @@ hacks
 ---------
 
 resources and mini-sites for the hacks 
+
+[COMMSHACK](http://uopcs.com/commshack)
+[SmartBike Hack](http://uopcs.com/smartbikehack)
