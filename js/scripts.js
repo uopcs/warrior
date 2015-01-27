@@ -1,18 +1,20 @@
 (function(){
-	$('.info-what').hide();
 	$('.archive').hide();
 	$('.meeting').find('.details').hide();
 
 	$('.meeting').find('.event-name').click(function(e){
+
+		$('.meeting').find('.details').hide();
+
+		$('.archive').slideDown(250);
+		
 		$(this).parents('.meeting').find('.details').slideToggle(100);
 		$(this).parents('.meeting').find('.show-desc').text(swapMoreLess($(this).parents('.meeting').find('.show-desc').text()));
-		e.preventDefault();
-	});
+		
+		scrollPage(this);
 
-	$('.more-info-what').click(function(e){
-		$('.more-info-what').text(swapMoreLess($('.more-info-what').text()));
-		$('.info-what').slideToggle(100);
 		e.preventDefault();
+
 	});
 
 	$('.more-info-map').click(function(e){
@@ -24,19 +26,28 @@
 
 	$('.previous').find('.meetings,.more').click(function(e){
 
-		if($(this).is('.meetings')){		
+		if($(this).is('.meetings')){	
+
+			$('.meeting').find('.details').hide();	
+
 			$('.archive').slideDown(250);
+			
 			$(this.hash).find('.details').slideDown(100);
-			console.log('wow');
 			$(this.hash).find('.show-desc').text(swapMoreLess($(this.hash).find('.show-desc').text()));
+			
 			scrollPage(this);
+
 		} else {
+
 			$('.archive').slideToggle(250,function(){
 				$('.details').hide();
 				history.pushState('', document.title, window.location.pathname); // remove the hash
 			});
+
 		}
+
 		e.preventDefault();
+
 	});
 
 	checkHash();
@@ -75,70 +86,6 @@ function scrollPage(clicked){
 		parent.location.hash = id; //Set hash id in URL
 	}); // Moves to the top of the post in 'animationSpeed'ms
 }
-
-// Map
-
-function openPopups(markers){
-	for(var i = 0; i < markers.length; i++){
-		markers[i].openPopup();
-	}
-}
-
-var portlandBuilding = new L.LatLng(50.798612, -1.099304);
-var ravelinPark = new L.LatLng(50.792454, -1.097009);
-
-var union = new L.LatLng(50.794265, -1.0967600);
-
-var brewhouseKitchen = new L.LatLng(50.7962552, -1.093365);
-var honestPoli = new L.LatLng(50.790383, -1.088686);
-var theDeco = new L.LatLng(50.789357, -1.084105);
-var oneEyedDog = new L.LatLng(50.789368, -1.082842);
-var fatFox = new L.LatLng(50.788678, -1.08248); 
-var lJR = new L.LatLng(50.7875878, -1.082029);
-var technologyLearningCentre = new L.LatLng(50.79880000, -1.0982454);
-
-var mapZoom = 16;
-
-var map = L.map('map', { scrollWheelZoom: false }).setView(portlandBuilding, mapZoom);
-
-L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/">&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>' })
-    	   .addTo(map);
-
-var fullScreen = new L.Control.FullScreen(); 
-map.addControl(fullScreen);
-
-map.panTo(brewhouseKitchen);
-
-var places = [
-	{ name: 'The White Swan, 26 Guildhall Walk, Portsmouth', latLng: brewhouseKitchen }
-];
-
-var markers = [];
-
-for(var i = 0; i < places.length; i++){
-	var place = places[i];
-
-	var url = "https://maps.google.co.uk/maps?daddr="+ place.name +"&sll="+ place.latLng.lat +","+ place.latLng.lng +"&z="+ mapZoom;
-
-	var iconName = "default.png";
-
-	if(places.length > 1){ iconName = (i+1) +".png"; }
-
-	var markerIcon = L.icon({
-		iconUrl: "./img/map-markers/"+ iconName,
-
-		iconSize:     [24, 38], // size of the icon
-		iconAnchor:   [12, 38], // where the 'tip' is
-		popupAnchor:  [0, -20], // point from which the popup should open relative to the iconAnchor
-
-		
-	});
-
-	var marker = L.marker(place.latLng, {icon: markerIcon }).addTo(map)
-     	      .bindPopup("<a class='direct' href='"+ url +"' target='_blank' title='Get directions here&hellip;'>"+ place.name +"</a>");
-}
-
 
 // Background drawing
 

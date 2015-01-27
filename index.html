@@ -1,520 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'  />
+---
+layout: default
+---
 
-	<meta name="description" content="The Computing Society is a place to hang out with people with a passion for computing. We hold socials as well as organised talks and group projects throughout the year.">
+<main>
 
-	<!-- Open Graph details -->
-	<meta property='og:title' content='UoPCS - University of Portsmouth Computing Society'/>	
-	<meta property='og:description' content='The Computing Society is a place to hang out with people with a passion for computing.	We hold weekly socials as well as organised talks and group projects throughout the year.'/>
-	<meta property='og:url' content='http://www.uopcs.com'/>
-	<meta property='og:site_name' content='UoPCS - University of Portsmouth Computing Society'/>
-	<meta property='og:image' content='img/square-logo.png'/>
-	<meta property="og:type" content="website"/>
-
-	<!-- Twitter summary card -->
-
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@uopcs">
-	<meta name="twitter:creator" content="@uopcs">
-	<meta name="twitter:title" content="UoPCS - University of Portsmouth Computing Society">
-	<meta name="twitter:description" content="The Computing Society is a place to hang out with people with a passion for computing. We hold weekly socials as well as organised talks and group projects throughout the year.">
-	<meta name="twitter:image" content="img/square-logo.png">	
-
-	<link rel="shortcut icon" href="img/favicon.ico" />
-
-	<link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/leaflet.css" />
-	<!--[if lte IE 8]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
-	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="css/style.css" />
-
-	<title>UoPCS - University of Portsmouth Computing Society</title>
-</head>
-<body>
-
-	<div class="event-banner">
-		<a href="http://uopcs.com/smartbikehack">Looking for SmartBike Hack?</a>
-	</div>
-
-	<header>
-		<a href="/" class="logo logo-svg"><h1>The Computing Society</h1></a>
-	</header>
-
-	<main>
-
-		<section class="text-section">
-			<p>The Computing Society is a place to hang out with people with a passion for computing.</p>
-			<p>We hold socials as well as organised talks and group projects throughout the year.</p>
-		</section>
+	<section class="text-section">
+		<p>The Computing Society is a place to hang out with people with a passion for computing.</p>
+		<p>We hold socials as well as organised talks and group projects throughout the year.</p>
+	</section>
+	
+	<article class="event">
 		
-		<article class="event">
-			
-			<section class="top">
-				<h1>What's Up?</h1>
-			</section>
-
-			<section class="content">
-
-				<div class="row">
-					<div class="col q">What?</div>
-					<div class="col a">Talk Night - March 2014<a class="more-info more-info-what" href="#">More</a></div>
-				</div>
-
-				<div class="row info-what">
-					<div class="links-col col">						
-						<a href="https://www.facebook.com/events/268511013318065/" class="facebook social-button">RSVP</a>
-						<a href="http://brewhouseandkitchen.com/" id="brewhouse">Brewhouse &amp; Kitchen</a>
-					</div>
-					<div class="info-col col">
-						<img class="event-image" src="img/events/talknight.png" alt="Speaker infront of a screen">
-
-						<p>ARE YOU READY FOR SOME LESS TECHNICAL AND EXCITING TALKS? >:¬O</p>
-
-						<p>As before we'll be at the <a href="http://brewhouseandkitchen.com/">Brewhouse &amp; Kitchen</a> (White Swan). Gonna be a good one, see you guys there. :¬)</p>
-
-						<ol class="talks">
-
-							<li><span class="talk-title">Beethoven in the Binary</span> - <span class="talk-speaker">David Williams</span></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/ZpkLn5">Slides</a></li>
-							</ul>
-
-							<li><span class="talk-title">Thinking Environments</span> - <span class="talk-speaker">Augustin Seng</span></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/vM7Evo">Slides</a></li>
-							</ul>
-
-							<li><span class="talk-title">Neo/Geocities</span> - <a href="http://7software.co.uk" class="talk-speaker">Samuel Barnes</a></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/9a0B1d">Slides</a></li>
-							</ul>
-
-						</ol>
-
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col q">Where?</div>
-					<div class="col a">Brewhouse &amp; Kitchen<span class="note">(The White Swan)</span><a class="more-info more-info-map" href="#">Map</a></div>
-				</div>
-
-				<div class="row info-map"><div id="map"></div></div>
-
-				<div class="row">
-					<div class="col q">When?</div>
-					<div class="col a">Tuesday, March 11th<span class="note">7:00pm</span></div>
-				</div>
-
-			</section>
-
-			
-
-			<section class="previous">
-
-				<p>Previous:</p>
-
-				<a class="meetings" href="#talknightjan2014">
-					<h2>Talk Night</h2>
-					<h3>January 2014</h3>
-				</a>
-
-				<a class="meetings" href="#commshack">
-					<h2>Comms Hack</h2>
-					<h3>11/12/13</h3>
-				</a>
-
-				<a class="meetings" href="#talknightnov2013">
-					<h2>Talk Night</h2>
-					<h3>November 2013</h3>
-				</a>
-
-				<p class="more"><a href="#">Archive</a></p>
-
-			</section>
-
-		</article>
-
-		<article class="archive">
-
-			<section class="meeting" id="talknightjan2014">
-
-				<div class="event-name">
-					<time datetime="2014-01-28T19:00Z">28/01/2014</time>
-					<h1>Talk Night - January 2014</h1>
-					<h2>w/ Sam Barnes, Ijem Ofili, Zac Colley, David Williams &amp; Nick Savage</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Brewhouse &amp; Kitchen</li>
-							<li class="note">(The White Swan)</li>
-						</ul>
-						<a href="https://www.facebook.com/events/210531302472371/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<img class="event-image" src="img/events/talknight.png" alt="Speaker infront of a screen">
-						<p>We have some rapid fire talks to start and then followed by Head of the School of Computing, Nick Savage.</p>
-						<p>As always graciously hosted at the <a href="http://brewhouseandkitchen.com/">Brewhouse &amp; Kitchen</a> for some half-time beverages.</p>
-						<ol class="talks">
-
-							<li><span class="talk-title">Mo' Money, Mo' Cryptocurrency</span> - <a href="http://7software.co.uk" class="talk-speaker">Sam Barnes</a></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/e3s8DJ">Slides</a></li>
-							</ul>
-
-							<li><span class="talk-title">Making the Case for Cross Platform Development</span> - <a href="http://twitter.com/IjemOfili" class="talk-speaker">Ijem Ofili</a></li>
-							<ul class="links">
-								<li><a href="http://slid.es/ijemofili/deck">Slides</a></li>
-							</ul>
-
-							<li><span class="talk-title">What is Responsive Web Design?</span> - <a href="http://zaccolley.com" class="talk-speaker">Zac Colley</a></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/dcLqeu">Slides</a></li>
-							</ul>
-
-							<li><span class="talk-title">How the Babbage Engines Powered through History</span> - <span class="talk-speaker">David Williams</span></li>
-							<ul class="links">
-								<li><a href="http://goo.gl/YpDNnE">Slides</a></li>
-							</ul>
-
-
-							<li><span class="talk-title">All Input is Evil</span> - <a href="http://savagen.myweb.port.ac.uk/" class="talk-speaker">Nick Savage</a></li>
-						</ol>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-			<section class="meeting" id="commshack">
-
-				<div class="event-name">
-					<time datetime="2013-12-11T10:00Z">11/12/2013</time>
-					<h1>COMMS HACK</h1>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Technology Learning Centre</li>
-							<li class="note">(0.08 Lion Gate)</li>
-							<li class="twilio">Powered by <a href="https://www.twilio.com/">Twilio</a></li>
-						</ul>
-						<a href="http://www.eventbrite.co.uk/e/comms-hack-tickets-9386339795" class="eventbrite social-button">Sign Up</a>
-						<a href="https://www.facebook.com/events/552849768123579/" class="facebook social-button">RSVP</a>
-					</section>
-					<section class="col desc">
-						<img class="event-image event-image-right" src="img/events/commshack2.png" alt="A laptop and lightning bolt">
-						<p>Come for a day of hacking, learning and fun. The theme is communication and we will be introducing people to making apps with SMS and voice features powered on the web!</p>
-						<p>There will be free food so you can graze throughout the event. Also mysterious swag!</p>
-						<p>Driven by Twilio, you could make something which texts you when your dinner is cooked. Or a wake-up call with your day's to-do list spoken to you by Microsoft Sam!</p>
-
-						<img class="event-image event-image-left" src="img/events/commshack1.png" alt="A telephone, mobile phone and lightning bolt">
-						<p>Anyone is welcome (that's non-students too!), whether your skills lie in graphic design or web development. The main goal is to make some interesting stuff!</p>
-						<p>Don’t worry if you have no programming knowledge, you should be able to find someone who you can hack with.</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-
-			<section class="meeting" id="talknightnov2013">
-
-				<div class="event-name">
-					<time datetime="2013-11-26T19:00Z">15/11/2013</time>
-					<h1>Talk Night - November 2013</h1>
-					<h2>w/ Todd Perry &amp; Tom Savage</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Brewhouse &amp; Kitchen</li>
-							<li class="note">(The White Swan)</li>
-						</ul>
-						<a href="https://www.facebook.com/events/220219711485966/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<img class="event-image" src="img/events/talknight.png" alt="Speaker infront of a screen">
-						<p>Following a great first night of the year, we have some more talks!</p>
-						<p>Todd Perry, professional zoomer and placement student will kick off the night, then we have graduate Tom Savage coming all the way down from old London town.</p>
-						<p>As of before, we'll be at the <a href="http://brewhouseandkitchen.com/">Brewhouse &amp; Kitchen</a> for some half-time beverages.</p>
-						<ol class="talks">
-							<li><span class="talk-title">Talking to Hardware with Arduinos</span> - <a href="#" class="talk-speaker">Todd Perry</a></li>
-							<ul class="links">
-								<li><a href="https://docs.google.com/presentation/d/1LVxBDoputy8rVjefDcAigleK9V-gv2yygSq0NlGgjfs">Slides</a></li>
-							</ul>
-							<li><span class="talk-title">Lazy Languages</span> - <a href="http://tcsavage.org/" class="talk-speaker">Tom Savage</a></li>
-							<ul class="links">
-								<li><a href="https://drive.google.com/file/d/0B6ArVf9BeyDeeFdCSWVpd3dDQ0U">Slides</a></li>
-							</ul>
-						</ol>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-			<section class="meeting" id="corruptedpubcrawl">
-
-				<div class="event-name">
-					<time datetime="2013-11-07T19:00Z">07/11/2013</time>
-					<h1>Corrupted Pub Crawl</h1>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>The Union</li>
-							<li class="note">(The Waterhole Bar)</li>
-						</ul>
-						<a href="https://www.facebook.com/events/604388679600002/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">						
-						<img class="event-image" src="img/events/corruptedpubcrawl.png" alt="A ghostly ghost">						
-						<p>Halloween will have come and gone, what memories! You took so many pictures that night, all safely stored on your trusty USB stick!</p>
-						<p>But wait&hellip; Oh dear. You didn't safely eject it. They're all lost, you don't even remember the night without the images.</p>
-
-						<p>Then you best come on the <em>Corrupted Pub Crawl</em>.</p>
-
-						<h3>Route:</h3>
-
-						<ol class="crawlroute">
-							<li>Union <span>(of Two Sets)</span></li>
-							<li>Honest <span>(Hewlett Packard)</span> Politician</li>
-							<li>Deco<span>(mpression)</span></li>
-							<li>One-Eyed Dog<span>(e)</span></li>
-							<li>Fat <span>(Fire)</span>Fox</li>
-							<li>Little Johnny <span>(Five)</span> Russells</li>
-						</ol>
-
-						<p>Dress in Halloween fancy dress with a Computing flavour. So spoooky!</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-			<section class="meeting" id="talknightoct2013">
-
-				<div class="event-name">
-					<time datetime="2013-10-15T19:00Z">15/10/2013</time>
-					<h1>Talk Night - October 2013</h1>
-					<h2>w/ Ed Morrison &amp; Edd Slipszenko</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Brewhouse &amp; Kitchen</li>
-							<li class="note">(The White Swan)</li>
-						</ul>
-						<a href="https://www.facebook.com/events/530193880399086/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<img class="event-image" src="img/events/talknight.png" alt="Speaker infront of a screen">
-						<p>It's our first talk night of the year and we have some interesting talks to be excited for! We've moved from the classrooms of last year and trying out a new venue.</p>
-						<p>Hosted at the <a href="http://brewhouseandkitchen.com/">Brewhouse &amp; Kitchen</a>, there's going to be a great atmosphere. Plus the benefit of convenient refreshments through-out!</p>
-						<p>Come and enjoy the following:</p>
-						<ol class="talks">
-							<li><span class="talk-title">What Your Face Says About You</span> - <a href="http://www.port.ac.uk/departments/academic/psychology/staff/title,93199,en.html" class="talk-speaker">Ed Morrison</a></li>
-							<ul class="links">
-								<li><a href="https://docs.google.com/presentation/d/1UPDyYmzdl6_RMOnExg340HyFoQeaV_JftX-dqBq3my8">Slides</a></li>
-								<li><a href="http://users.aber.ac.uk/bpt/jpsychomorph/">Psychomorph app</a></li>
-							</ul>
-							<li><span class="talk-title">HTML5 Audio and Speech Recognition</span> - <a href="https://twitter.com/slipszenko" class="talk-speaker">Edd Slipszenko</a></li>
-							<ul class="links">
-								<li><a href="http://audionav.slipszenko.net/presentation/compsoc.html">Slides</a></li>
-							</ul>							
-						</ol>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-			<section class="meeting" id="whitetshirt2013">
-
-				<div class="event-name">
-					<time datetime="2013-09-27T19:00Z">27/09/2013</time>
-					<h1>White T-Shirt Social - 2013</h1>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>The Union</li>
-							<li class="note">(The Waterhole)</li>
-						</ul>
-						<a href="https://www.facebook.com/events/406851379437759/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<img class="event-image" src="img/events/whitetshirtsocial.png" alt="White t-shirt and marker pen">
-						<p>Wear a white shirt (you can get them cheap from Primark) and bring marker pens, we'll go for a drink and draw (write code) on each other.</p>
-						<p>We're starting at the Union bar "The Waterhole", then moving to other places as the night goes on.</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-		
-			<section class="meeting" id="freshers2013">
-
-				<div class="event-name">
-					<time datetime="2013-09-18">18/09/2013</time>
-					<h1>Fresher's Fayre</h1>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Ravelin Park</li>
-							<li class="note">Stall 93</li>
-							<a href="https://www.facebook.com/events/361557583947781/" class="facebook social-button">Facebook</a>
-						</ul>
-					</section>
-					<section class="col desc">
-						<p>Fresher's Fayre comes to Portsmouth on the 18th and 19th September. Come and find us and learn more about the society as well many others!</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-			<section class="meeting" id="gitgithub">
-
-				<div class="event-name">
-					<time datetime="2013-03-26T18:00Z">26/03/2013</time>
-					<h1>Git &amp; GitHub</h1>
-					<h2>w/ Mike Rogers</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Portland Building</li>
-							<li class="note">Room 1.26</li>
-						</ul>
-						<a href="https://www.facebook.com/events/229435020529125/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<p>Mike Rogers is in with his talk entitled "How to Git Like a Boss".</p>
-						<p>He will be going over the basics of <a href="http://git-scm.com/">Git</a> and talking through GitHub.</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-			<section class="meeting" id="d3js">
-
-				<div class="event-name">
-					<time datetime="2013-03-19T18:00Z">19/03/2013</time>
-					<h1>D3.js</h1>
-					<h2>w/ Rich Boakes</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Portland Building</li>
-							<li class="note">Room 1.26</li>
-							<a href="https://www.facebook.com/events/107450662779488/" class="facebook social-button">Facebook</a>
-						</ul>
-					</section>
-					<section class="col desc">
-						<p>Rich Boakes introduces us to <a href="http://d3js.org/">D3.js</a>, a JavaScript library, and how it can breathe life into your data using HTML, SVG and CSS!</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-			<section class="meeting" id="steganography">
-
-				<div class="event-name">
-					<time datetime="2013-02-26T18:00Z">26/02/2013</time>
-					<h1>Steganography</h1>
-					<h2>w/ Robbie Nicholls</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Portland Building</li>
-							<li class="note">Room 1.26</li>
-						</ul>
-						<a href="https://www.facebook.com/events/103036326550335/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<p>The art and science of writing hidden messages in such a way that no one, apart from the sender and intended recipient, suspects the existence of the message, a form of security through obscurity.</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-
-			<section class="meeting" id="haskell">
-
-				<div class="event-name">
-					<time datetime="2013-02-12T18:00Z">12/02/2013</time>
-					<h1>Functional Programming &amp; Haskell</h1>
-					<h2>w/ Tom Savage</h2>
-					<a href="#" class="show-desc">More</a>
-				</div>
-
-				<section class="details">
-					<section class="col info">
-						<ul>
-							<li>Portland Building</li>
-							<li class="note">Room 1.26</li>
-						</ul>
-						<a href="https://www.facebook.com/events/335215789915813/" class="facebook social-button">Facebook</a>
-					</section>
-					<section class="col desc">
-						<p>Haskell is a standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.</p>
-						<p>In Haskell, "a function is a first-class citizen" of the programming language. As a functional programming language, the primary control construct is the function.</p>
-					</section>
-				</section> <!-- end of details -->
-
-			</section>
-			
-		</article>
-
-		<section class="social">
-			<div class="social-button-wrapper">
-				<a href="https://www.facebook.com/groups/uopcs" class="social-button facebook facebook-svg">Facebook</a>
-			</div>
-			<div class="social-button-wrapper">
-				<a href="https://www.twitter.com/uopcs" class="social-button twitter twitter-svg">Twitter</a>
-			</div>
-			<div class="social-button-wrapper">
-				<a href="https://www.github.com/uopcs" class="social-button github github-svg">GitHub</a>
-			</div>
-			<div class="social-button-wrapper join-us">
-				<a href="http://www.upsu.net/activities/societies/a-z-societies/computing.php" class="social-button">Join us!</a>
-			</div>
+		<section class="top">
+			<h1>What's Up?</h1>
 		</section>
 
-	</main>
+		<section class="content">
 
-	<div id="background-images"></div>
+			{% for post in site.posts limit:1 %}
 
-	<!-- <footer></footer> -->
+			<div class="row">
+				<div class="col q">What?</div>
+				<div class="col a">{{ post.title }}</div>
+			</div>
 
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script type="text/javascript" src="js/leaflet.js"></script>
-	<script type="text/javascript" src="js/leaflet-fullscreen.js"></script>
-	<script type="text/javascript" src="js/raphael.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-</body>
-</html>
+			<div class="row info-what">
+
+				<div class="links-col col">	
+					
+					{% if post.eventbrite %}
+					<a href="{{ post.eventbrite }}" class="eventbrite social-button">Sign Up</a>
+					{% endif %}
+
+					{% if post.facebook %}
+					<a href="{{ post.facebook }}" class="facebook social-button">RSVP</a>
+					{% endif %}
+
+				</div>
+
+				<div class="info-col col">
+					{{ post.content }}
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col q">Where?</div>
+				<div class="col a">{{ post.place | join: ', ' }}</div>
+			</div>
+
+			<div class="row">
+				<div class="col q">When?</div>
+				<div class="col a">{{ post.date | date: "%F" }}<span class="note">{{ post.date | date: "%R" }}</span></div>
+			</div>
+
+			{% endfor %}
+
+		</section> <!-- end of .content -->		
+
+		<section class="previous">
+
+			<p>Previous:</p>
+
+			{% for post in site.posts offset:1 limit:3 %}
+
+			<a class="meetings" href="#{{ post.hash }}">
+				<h2>{{ post.title | truncate: 16 }}</h2>
+				<h3><time title="{{ post.date | date: '%c' }}" datetime="{{ post.date | date: '%FT%RZ' }}">{{ post.date | date: "%D"}}</time></h3>
+			</a>
+
+			{% endfor %}
+
+			<p class="more"><a href="#">Archive</a></p>
+
+		</section> <!-- end of .previous -->
+
+	</article>
+
+	<article class="archive">
+
+		{% for post in site.posts offset:1 %}
+
+		<section class="meeting">
+
+			<a class="event-name" id="{{ post.hash }}" href="#{{ post.hash }}">
+
+				<time title="{{ post.date | date: '%c' }}" datetime="{{ post.date | date: '%FT%RZ' }}">{{ post.date | date: "%D" }}</time>
+				<h1>{{ post.title }}</h1>
+				<span class="show-desc">More</span>
+
+			</a>				
+			
+			<section class="details">
+
+				<section class="col info">
+
+					{% if post.place %}
+					<ul>
+						{% for info in post.place %}
+						
+						{% if info.last %}
+						<li class="note">{{ info }}</li>
+						{% else %}
+						<li>{{ info }}</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+					{% endif %}
+					
+					{% if post.eventbrite %}
+					<a href="{{ post.eventbrite }}" class="eventbrite social-button">Sign Up</a>
+					{% endif %}
+
+					{% if post.facebook %}
+					<a href="{{ post.facebook }}" class="facebook social-button">RSVP</a>
+					{% endif %}
+
+				</section>
+
+				<section class="col desc">
+					{{ post.content }}
+				</section>
+
+			</section> <!-- end of .details -->
+
+		</section> <!-- end of .meeting -->
+
+		{% endfor %}
+		
+	</article>
+
+	{% include social.html %}
+
+</main>
