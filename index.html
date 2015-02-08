@@ -52,7 +52,7 @@ layout: default
 
 			<div class="row">
 				<div class="col q">When?</div>
-				<div class="col a">{{ post.date | date: "%F" }}<span class="note">{{ post.date | date: "%R" }}</span></div>
+				<div class="col a">{{ post.date | date: "%a, %-d %b %Y" }}<span class="note">{{ post.date | date: "%R" }}</span></div>
 			</div>
 
 			{% endfor %}
