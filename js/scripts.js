@@ -1,67 +1,71 @@
 (function(){
+
+	// collapse everything on load
 	$('.archive').hide();
 	$('.meeting').find('.details').hide();
 
 	$('.meeting').find('.event-name').click(function(e){
 
-		$('.meeting').find('.details').hide();
+		focusIndividualMeeting(this);
 
-		$('.archive').slideDown(250);
-		
-		$(this).parents('.meeting').find('.details').slideToggle(100);
-		$(this).parents('.meeting').find('.show-desc').text(swapMoreLess($(this).parents('.meeting').find('.show-desc').text()));
-		
-		scrollPage(this);
-
-		e.preventDefault();
-
-	});
-
-	$('.more-info-map').click(function(e){
-		$('.info-map').slideToggle(100);
-		map.invalidateSize();
-		openPopups(markers);
-		e.preventDefault();
 	});
 
 	$('.previous').find('.meetings,.more').click(function(e){
 
-		if($(this).is('.meetings')){	
+		if($(this).is('.meetings')){
 
-			$('.meeting').find('.details').hide();	
-
-			$('.archive').slideDown(250);
-			
-			$(this.hash).find('.details').slideDown(100);
-			$(this.hash).find('.show-desc').text(swapMoreLess($(this.hash).find('.show-desc').text()));
-			
-			scrollPage(this);
+			focusIndividualMeeting(this);
 
 		} else {
 
 			$('.archive').slideToggle(250,function(){
 				$('.details').hide();
+				$('.meeting').removeClass('meeting--focus');
 				history.pushState('', document.title, window.location.pathname); // remove the hash
 			});
 
 		}
 
-		e.preventDefault();
-
 	});
 
 	checkHash();
 
-	var svg_support = (!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect);
+	// Remove SVG if it isnt supported
 
-	//Remove SVG if it isnt supported
-	if (!svg_support) {		
+	var svg_support = (!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect);
+	if (!svg_support) {
 		$('.logo').removeClass('logo-svg');
 		$('.twitter').removeClass('twitter-svg');
 		$('.facebook').removeClass('facebook-svg');
 	}
 
 })();
+
+function focusIndividualMeeting(meeting){
+
+	var meetingEl = $( $(meeting).attr('href') ).parent('.meeting');
+
+	// dont focus if it's already focussed
+	if( !meetingEl.hasClass('meeting--focus') ){
+
+		// close all meetings
+		$('.meeting').find('.details').hide();
+		$('.meeting').removeClass('meeting--focus');
+
+		// if not already open, slide open archive
+		var archiveVisible = $('.archive:visible').length <= 0;
+		if(archiveVisible){
+			$('.archive').slideDown(250);
+		}
+
+		// slide down the meeting
+		meetingEl.addClass('meeting--focus');
+		meetingEl.find('.show-desc').text(swapMoreLess($(this.hash).find('.show-desc').text()));
+		window.location.href = $(meeting).attr('href');
+		meetingEl.find('.details').slideDown(250);
+
+	}
+}
 
 function swapMoreLess(text){
 	if(text.toLowerCase() == 'more'){
@@ -75,16 +79,6 @@ function checkHash() {
 	if ( hash ) {
 		$('[href="#' + hash + '"]').trigger('click');
 	}
-}
-
-function scrollPage(clicked){
-	var animationSpeed = 500;					 // Speed of the animation in ms
-	var url = window.location.protocol + "//" + window.location.host + window.location.pathname; // Get current URL
-	var id = String(clicked).substr(url.length); // Take the URL and leave the # part
-	var scrollAmount = $(id).position().top;	// Finds the position from the top of the window for the heading with the ID 'hrefValue'
-	$('html, body').animate({scrollTop: scrollAmount}, animationSpeed, function(){
-		parent.location.hash = id; //Set hash id in URL
-	}); // Moves to the top of the post in 'animationSpeed'ms
 }
 
 // Background drawing
@@ -139,7 +133,7 @@ function drawWire(bg, forks, delay, lineLength, x, y){
 
 	var ease =  'bounce';
 
-	if(forks == 0){
+	if(forks === 0){
 
 		var wirePathSub1 = 'M'+ x +','+ y;
 		var wirePathSub2 = 'L'+ (x+(lineLength*2)-strokeWidth-strokeOffset) +','+ y;
@@ -154,7 +148,7 @@ function drawWire(bg, forks, delay, lineLength, x, y){
 					   .attr(wireAttributes).attr({ 'stroke-width': 0 })
 					   .animate(wireCircleAnim.delay(delay * 3));
 
-	}else if(forks == 2){
+	}else if(forks === 2){
 
 		var wirePath1Sub1 = 'M'+ x +','+ y;
 		var wirePath1Sub2 = 'L'+ (x+lineLength) +','+ y;
@@ -184,6 +178,6 @@ function drawWire(bg, forks, delay, lineLength, x, y){
 					   .attr(wireAttributes).attr({ 'stroke-width': 0 })
 					   .animate(wireCircleAnim.delay(delay * 3));
 
-	}	
+	}
 
 }

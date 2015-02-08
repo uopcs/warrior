@@ -5,12 +5,13 @@ layout: default
 <main>
 
 	<section class="text-section">
-		<p>The Computing Society is a place to hang out with people with a passion for computing.</p>
-		<p>We hold socials as well as organised talks and group projects throughout the year.</p>
+		<p>{{ site.description }}</p>
 	</section>
-	
+
+	{% include social.html %}
+
 	<article class="event">
-		
+
 		<section class="top">
 			<h1>What's Up?</h1>
 		</section>
@@ -26,8 +27,8 @@ layout: default
 
 			<div class="row info-what">
 
-				<div class="links-col col">	
-					
+				<div class="links-col col">
+
 					{% if post.eventbrite %}
 					<a href="{{ post.eventbrite }}" class="eventbrite social-button">Sign Up</a>
 					{% endif %}
@@ -56,7 +57,7 @@ layout: default
 
 			{% endfor %}
 
-		</section> <!-- end of .content -->		
+		</section> <!-- end of .content -->
 
 		<section class="previous">
 
@@ -89,8 +90,8 @@ layout: default
 				<h1>{{ post.title }}</h1>
 				<span class="show-desc">More</span>
 
-			</a>				
-			
+			</a>
+
 			<section class="details">
 
 				<section class="col info">
@@ -98,7 +99,7 @@ layout: default
 					{% if post.place %}
 					<ul>
 						{% for info in post.place %}
-						
+
 						{% if info.last %}
 						<li class="note">{{ info }}</li>
 						{% else %}
@@ -107,7 +108,7 @@ layout: default
 						{% endfor %}
 					</ul>
 					{% endif %}
-					
+
 					{% if post.eventbrite %}
 					<a href="{{ post.eventbrite }}" class="eventbrite social-button">Sign Up</a>
 					{% endif %}
@@ -127,9 +128,7 @@ layout: default
 		</section> <!-- end of .meeting -->
 
 		{% endfor %}
-		
-	</article>
 
-	{% include social.html %}
+	</article>
 
 </main>

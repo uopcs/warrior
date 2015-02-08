@@ -63,7 +63,7 @@ header .logo:hover { opacity: .8; }
 	font-family: "Anonymous Pro", Helvetica, Arial, sans-serif;
 	font-weight: 800;
 	color: #FFF;
-	
+
 	text-align: center;
 	text-decoration: none;
 }
@@ -80,8 +80,10 @@ header .logo:hover { opacity: .8; }
 }
 
 main {
+	overflow: hidden;
+	max-width: 900px;
 	width: 70%;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 }
 
 .archive,
@@ -89,7 +91,7 @@ main {
 	box-shadow: 0  5px 0 rgba(25, 25, 25, 0.2);
 }
 
-/* 
+/*
 	event section
 					*/
 
@@ -157,7 +159,7 @@ main {
 	border-bottom: 2px solid transparent;
 }
 
-.content .info-what a:hover{	
+.content .info-what a:hover{
 	border-bottom: 2px solid #5A8F53;
 	-webkit-transition: border-color .1s;
 			transition: border-color .1s;
@@ -358,7 +360,7 @@ main {
 	border: none;
 }
 
-.links-col a.social-button{	
+.links-col a.social-button{
 	margin-bottom: 10%;
 	padding: .5em .75em;
 	padding-left: 2em;
@@ -371,7 +373,7 @@ main {
 
 .links-col a.eventbrite{
 	background-size: 30%;
-	background-position: left center; 
+	background-position: left center;
 }
 
 .links-col a#brewhouse{
@@ -565,7 +567,6 @@ main {
 			*/
 
 .archive {
-	overflow: hidden;
 	padding: 1em 0;
 	background: rgb(41, 41, 41);
 }
@@ -573,12 +574,25 @@ main {
 .archive .meeting {
 	padding: 1em 0;
 	background: rgb(41, 41, 41);
+
+	-webkit-transition: margin .25s;
+	   -moz-transition: margin .25s;
+			transition: margin .25s;
 }
 
 .archive .meeting:nth-child(odd) {
 	background: #242424;
 	border-top: 5px dashed #292929;
 	border-bottom: 5px dashed #292929;
+}
+
+.archive .meeting--focus,
+.archive .meeting--focus:nth-child(odd) {
+	position: relative;
+	margin: -10px;
+
+	background: #3F3F3F;
+	border: 0;
 }
 
 .archive .event-name,
@@ -593,9 +607,7 @@ main {
 	text-align: left;
 }
 
-.archive .event-name:focus,
-.archive .event-name:focus + .details {
-	background: rgba(100, 100, 100, 0.25);
+.archive .event-name:focus {
 	outline: none;
 }
 
@@ -618,7 +630,7 @@ main {
 	width: 50%;
 	color: #F5F5F5;
 	font-size: 1em;
-	padding: 0 1em;	
+	padding: 0 1em;
 	-webkit-transition: opacity .1s;
 			transition: opacity .1s;
 }
@@ -735,12 +747,13 @@ main {
 			transition: border-color .1s;
 }
 
-.archive .details .col a:hover{	
+.archive .details .col a:hover{
 	border-bottom: 1px solid #5A8F53;
 }
 
 .text-section {
-	margin: 1em 0;
+	margin: 1em auto;
+	max-width: 40em;
 	padding: 1em .5em;
 	font-family: 'Anonymous Pro', Helvetica, Arial, sans-serif;
 	overflow: hidden;
@@ -753,14 +766,13 @@ main {
 	font-size: 1.15em;
 	line-height: 1.25;
 	padding: .25em 1em;
-	margin: 0 auto;
-	max-width: 40em;
 }
 
 .social {
 	padding-bottom: 5px;
 	overflow: hidden;
-	margin: 30px 0;
+	margin: 30px auto;
+	max-width: 50em;
 }
 
 .social .social-button-wrapper {
@@ -860,7 +872,7 @@ footer {
 /* Media queries */
 
 @media (min-width: 1400px) {
-	
+
 	header .logo{ background-size: 50%; }
 
 }
@@ -926,7 +938,7 @@ footer {
 	}
 
 	.text-section p { font-size: 1em; }
-	
+
 	.content .q,
 	.content .a,
 	.content .info-what .links-col {
@@ -939,7 +951,7 @@ footer {
 	.content .info-what .info-col {
 		width: 100%;
 		padding: 0 1em;
-		
+
 		border: 0;
 	}
 
@@ -981,7 +993,7 @@ footer {
 	}
 
 	header .logo{ padding: 0; }
-	
+
 	header .logo,
 	main {
 		width: 100%;
