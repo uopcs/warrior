@@ -1,7 +1,7 @@
 ---
 hash: white-tshirt-pub-crawl-2015
 title:  "White Tshirt Pub Crawl 2015"
-date:   2015-16-09 17:30:00
+date:   2015-09-16 17:30:00
 place: [The Kings Pub, Albert Roa]
 facebook: "https://www.facebook.com/events/463511090476342/"
 ---
