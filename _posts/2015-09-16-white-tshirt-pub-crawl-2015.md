@@ -10,21 +10,21 @@ Hello all!
 
 As we are expecting many new faces to the society this year, we have planned a bar crawl that will take you all around the main areas of the city that you will need to know. We've set up some fantastic drinks deals at each of the places we will be visiting. There will be non-drinkers in attendance as well so please do not feel pressured into drinking if you don’t want to.
 
-We will be arriving at The Kings pub on Albert Road from 5:30pm. This is where we will hold a short meeting electing new committee members for the year. Everyone is welcome, however only official members of the society (please apply here for free! http://www.upsu.net/activities/societies/a-z-societies/computing.php) are allowed to volunteer themselves for a role/vote.
+We will be arriving at The Kings pub on Albert Road from 5:30pm. This is where we will hold a short meeting electing new committee members for the year. Everyone is welcome, however only official members of the society ([please apply here for free!](http://www.upsu.net/activities/societies/a-z-societies/computing.php)) are allowed to volunteer themselves for a role/vote.
 
 The planned route for the night is as follows:
 
 ### Route:
 
 <ol class="crawlroute">
-    <li><span>5:30-6:30</span> - The Kings</li>
+    <li><span>5:30 - 6:30</span> - The Kings</li>
     <li><span>6:30 - 7:00</span> - Fat Fox</li>
     <li><span>7:00 - 7:30</span> - One-eyed Dog</li>
     <li><span>7:30 - 8:00</span> - The Deco</li>
     <li><span>8:00 - 8:30</span> - The Honest Politician</li>
     <li><span>8:45 - 9:15</span> - HB</li>
-    <li><span>8:00 - 8:30</span> - Lyberry Bar - (free burgers)</li>
-    <li><span>9:45 - 2.00am</span> - Fleet/Popworld - £3 entry to be bought at Lyberry</li>
+    <li><span>8:00 - 8:30</span> - Lyberry Bar <small>(free burgers)</small></li>
+    <li><span>9:45 - 2.00am</span> - Fleet/Popworld - <small>(£3 entry to be bought at Lyberry)</small></li>
 </ol>
 
 We were all freshers once, so we understand how daunting it can be to arrive at a social without knowing anyone, but that’s exactly why we are doing this, please don’t be afraid! 
