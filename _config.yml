@@ -4,11 +4,11 @@ description: The Computing Society is a place to hang out with people with a pas
 
 # social media
 
-twitter: uopcs
-facebook: uopcs
+twitter: theitsoc
+facebook: TheITSoc
 github: uopcs
 
-signup: http://www.upsu.net/activities/societies/a-z-societies/computing.php
+signup: https://membership.upsu.net/group/it-society
 
 # build settings
 markdown: kramdown
